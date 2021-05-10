@@ -1,5 +1,5 @@
 ##############################
-# Imperialist Faction
+# ADM
 ##############################
 
 gc_adm = {
@@ -121,88 +121,98 @@ gc_adm = {
 			}
 		}
 	}
-
+	
 	demand = {
-		title = "IMPERIALIST_PHILOSOPHY"
-		unfulfilled_title = "IMPERIALIST_NO_PHILOSOPHY"
-		desc = "IMPERIALIST_PHILOSOPHY_DESC"
+		title = "ADM_LEAKY_BOATS"
+		unfulfilled_title = "ADM_LEAKY_BOATS_UNFULFILLED"
+		desc = "ADM_LEAKY_BOATS_DESC"
 
-		unfulfilled_effect = -30
+		unfulfilled_effect = -10
 		fulfilled_effect = 0.001
 
 		potential = {
 			exists = owner
-			owner = {
-				any_relation = {
-					has_communications = root.owner
-					is_country_type = default
-					NOT = { exists = overlord }
-				}
-			}
 		}
 
 		trigger = {
 			owner = {
-				OR = {
-					has_policy_flag = unrestricted_wars
-					has_policy_flag = liberation_wars
-				}
+				used_naval_capacity_percent > 0.5
+			}
+		}
+	}
+	
+	demand = {
+		title = "ADM_LANDLUBBERS"
+		unfulfilled_title = "ADM_LANDLUBBERS_UNFULFILLED"
+		desc = "ADM_LANDLUBBERS_DESC"
+
+		unfulfilled_effect = -10
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				NOT = { has_valid_civic = civic_warrior_culture }
 			}
 		}
 	}
 
 	demand = {
-		title = "IMPERIALIST_CONQUEST"
-		unfulfilled_title = "IMPERIALIST_NO_CONQUEST"
-		desc = "IMPERIALIST_CONQUEST_DESC"
+		title = "ADM_GOODOLDBOYS"
+		unfulfilled_title = "ADM_GOODOLDBOYS_UNFULFILLED"
+		desc = "ADM_GOODOLDBOYS_DESC"
 
+		unfulfilled_effect = -10
 		fulfilled_effect = 10
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				has_valid_civic = civic_distinguished_admirality
+			}
+		}
+	}
+
+	demand = {
+		title = "ADM_LOOKINGFORMATEYS"
+		unfulfilled_title = "ADM_LOOKINGFORMATEYS_UNFULFILLED"
+		desc = "ADM_LOOKINGFORMATEYS_DESC"
+
+		fulfilled_effect = 5
 		unfulfilled_effect = -0.001
 
 		potential = {
 			exists = owner
 			owner = {
-				any_relation = {
+				any_country = {
+					is_country_type = enclave
 					has_communications = root.owner
-					is_country_type = default
-					NOT = { exists = overlord }
 				}
 			}
 		}
 
 		trigger = {
 			owner = {
-				has_country_flag = imperialist_conquest_timed_flag
+				any_system_within_border = {
+					any_fleet_in_system = {
+						exists = owner
+						owner = { is_country_type = enclave }
+					}
+				}
 			}
 		}
 	}
 
 	demand = {
-		title = "SUPREMACIST_FANATIC_PURIFIERS"
-		unfulfilled_title = "SUPREMACIST_NOT_FANATIC_PURIFIERS"
-		desc = "SUPREMACIST_FANATIC_PURIFIERS_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_fanatic_purifiers
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_valid_civic = civic_fanatic_purifiers
-			}
-		}
-	}
-
-	demand = {
-		title = "IMPERIALIST_RIVALS1"
-		unfulfilled_title = "IMPERIALIST_FEW_RIVALS1"
-		desc = "IMPERIALIST_RIVALS_DESC1"
+		title = "ADM_RIVALS1"
+		unfulfilled_title = "ADM_RIVALS1_UNFULFILLED"
+		desc = "ADM_RIVALS_DESC"
 
 		fulfilled_effect = 5
 		unfulfilled_effect = -5
@@ -224,9 +234,9 @@ gc_adm = {
 	}
 
 	demand = {
-		title = "IMPERIALIST_RIVALS2"
-		unfulfilled_title = "IMPERIALIST_FEW_RIVALS2"
-		desc = "IMPERIALIST_RIVALS_DESC2"
+		title = "ADM_RIVALS2"
+		unfulfilled_title = "ADM_RIVALS2_UNFULFILLED"
+		desc = "ADM_RIVALS_DESC"
 
 		fulfilled_effect = 10
 		unfulfilled_effect = -0.001
@@ -248,12 +258,12 @@ gc_adm = {
 	}
 
 	demand = {
-		title = "IMPERIALIST_RIVALS3"
-		unfulfilled_title = "IMPERIALIST_FEW_RIVALS3"
-		desc = "IMPERIALIST_RIVALS_DESC3"
+		title = "ADM_RIVALS3"
+		unfulfilled_title = "ADM_RIVALS3_UNFULFILLED"
+		desc = "ADM_RIVALS_DESC"
 
-		fulfilled_effect = 15
-		unfulfilled_effect = -0.001
+		fulfilled_effect = 0.001
+		unfulfilled_effect = -5
 
 		potential = {
 			exists = owner
@@ -266,7 +276,7 @@ gc_adm = {
 
 		trigger = {
 			owner = {
-				num_rivals > 2
+				NOT = { num_rivals > 2 }
 			}
 		}
 	}
@@ -362,60 +372,6 @@ gc_adm = {
 					has_modifier = artifact_find_peaceful_application_amenities
 					has_modifier = artifact_find_peaceful_application_leader_improvement
 				}
-			}
-		}
-	}
-
-	demand = {
-		title = "STRONG_DIPLO_STANCE"
-		unfulfilled_title = "STRONG_DIPLO_STANCE"
-		desc = "STRONG_DIPLO_STANCE_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				is_homicidal = no
-				is_country_type = default
-				OR = {
-					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_supremacist
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					has_policy_flag = diplo_stance_belligerent
-					has_policy_flag = diplo_stance_supremacist
-				}
-			}
-		}
-	}
-
-	demand = {
-		title = "WEAK_DIPLO_STANCE"
-		unfulfilled_title = "WEAK_DIPLO_STANCE"
-		desc = "WEAK_DIPLO_STANCE_DESC"
-
-		fulfilled_effect = 0.01
-		unfulfilled_effect = -10
-
-		potential = {
-			exists = owner
-			owner = {
-				is_homicidal = no
-				is_country_type = default
-				has_policy_flag = diplo_stance_cooperative
-			}
-		}
-
-		trigger = {
-			owner = {
-				NOT = { has_policy_flag = diplo_stance_cooperative }
 			}
 		}
 	}

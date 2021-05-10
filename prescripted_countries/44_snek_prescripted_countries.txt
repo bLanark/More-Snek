@@ -45,16 +45,16 @@
 	
 	empire_flag = {
 		icon={
-			category="ornate"
-			file="flag_ornate_10.dds"
+			category="human"
+			file="flag_coc.dds"
 		}
 		background= {
 			category = "backgrounds"
-			file="double_triangles.dds"
+			file="coc_saltire.dds"
 		}
 		colors={
-			"dark_green"
 			"grey"
+			"dark_green"
 			"null"
 			"null"
 		}

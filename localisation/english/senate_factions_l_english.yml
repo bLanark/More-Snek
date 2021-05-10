@@ -6,6 +6,46 @@
  gc_senate_factions.3.b: "Use Senate factions §Rwithout§! §Yweighted ideologies§!"
  gc_senate_factions.3.c: "Use vanilla faction mechanics"
 
+ G8R_REPTILIANS_PLEASE: "Reptilians in our midst!"
+ G8R_REPTILIANS_PLEASE_UNFULFILLED: "No Reptilian Species"
+ G8R_REPTILIANS_PLEASE_DESC: "All reptilian friends are welcome! We should ensure that we always have at elast §Y1 pop§! that belongs to the §Yreptilian§! species class."
+ 
+ G8R_SAVANNAH_PLEASE: "Vast Hot Savannahs"
+ G8R_SAVANNAH_PLEASE_UNFULFILLED: "No Vast Hot Savannahs"
+ G8R_SAVANNAH_PLEASE_DESC: "The [Root.GetName] has always priorized colonization of nice, warm lands. We need to continue this tradition by ensuring that there is at least one §YSavannah§! planet inhabited by us!"
+ 
+ G8R_SAVANNAH_PLEASE: "Burning Arid Wastes"
+ G8R_SAVANNAH_PLEASE_UNFULFILLED: "No Burning Arid Wastes"
+ G8R_SAVANNAH_PLEASE_DESC: "The [Root.GetName] has always priorized colonization of nice, warm lands. We need to continue this tradition by ensuring that there is at least one §YArid§! planet inhabited by us!"
+ 
+ G8R_SAVANNAH_PLEASE: "Hot Desert Sands"
+ G8R_SAVANNAH_PLEASE_UNFULFILLED: "No Hot Desert Sands
+ G8R_SAVANNAH_PLEASE_DESC: "The [Root.GetName] has always priorized colonization of nice, warm lands. We need to continue this tradition by ensuring that there is at least one §YDesert§! planet inhabited by us!"
+ 
+ ADM_LEAKY_BOATS: "A Pristine Navy!"
+ ADM_LEAKY_BOATS_UNFULLFILLED: "Leaky Boats!"
+ ADM_LEAKY_BOATS_DESC: "Having a state of the art grand navy pleases the [Root.GetName]. We must ensure that we are always using more than §Y50%§! of our §Ynaval capacity!§!"
+ 
+ ADM_LANDLUBBERS: "No Landlubber foolery!"
+ ADM_LANDLUBBERS_UNFULLFILLED: "Landlubber foolery!"
+ ADM_LANDLUBBERS_DESC: "War has changed. It would be cruel mockery of our armed forces to entertain the foolish, bygone pastime of fighting on steady surfaces. The time of §YWarrior Culture§ is over."
+ 
+ ADM_GOODOLDBOYS: "Good Old Boys!"
+ ADM_GOODOLDBOYS_UNFULLFILLED: "Abandoned Our Old Boys!"
+ ADM_GOODOLDBOYS_DESC: "Our naval tradition is strong and what is a spaceship if not a sea vessel... in space? As everyone knows that space warfare is pretty much similar to naval warfare, it is only natural that our naval heritage carries from our homeworld's waters to the cold waters of the void. Having the §YDistinguished Admirality§! civic is least we should do to honour our heritage!"
+ 
+ ADM_LOOKINGFORMATEYS: "Fresh Mateys from Galactic Harbours!"
+ ADM_LOOKINGFORMATEYS_UNFULLFILLED: "Looking For Mateys!"
+ ADM_LOOKINGFORMATEYS_DESC: "In the vast ocean of space there will always be fresh mateys to be enlisted. These hardy daredevils wait in galactic harbours for their chances to find their fate in the stars. Having §YEnclaves§! inside our borders ensures that fresh mateys from these station can always be on the lookout for adventure and join a passing navy!"
+ 
+ ADM_RIVALS1: "Rivalry Done Right!"
+ ADM_RIVALS1_UNFULLFILLED: "A Little More Rivalry!"
+ ADM_RIVALS2: "Rivalry Done Right!"
+ ADM_RIVALS2_UNFULLFILLED: "A Little More Rivalry!"
+ ADM_RIVALS3: "Rivalry Done Right!"
+ ADM_RIVALS3_UNFULLFILLED: "Too much Rivalry!"
+ ADM_RIVALS_DESC: "Having galactic rivalrs is healthy and drives for competition! Having §Y1§! to §Y2§! proper §Yrivals§! will please the [Root.GetName] but more than that is clearly immoderate!"
+
  SSS_NO_TYRANTS:0 "No Royalist Tyrants"
  SSS_NO_TYRANTS_UNFULFILLED:0 "A Royalist Regime"
  SSS_NO_TYRANTS_DESC:0 "[Root.GetName] opposes royalist regimes. Having an §Yimperial§! or §Yoligarchic§! government angers is sure to incite their anger."

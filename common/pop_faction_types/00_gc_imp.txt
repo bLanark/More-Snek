@@ -1,5 +1,5 @@
 ##############################
-# Imperial Party, OK, not tested
+# Imperial Party, OK, tested
 ##############################
 
 gc_imp = {

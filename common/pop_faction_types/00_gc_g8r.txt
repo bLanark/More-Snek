@@ -1,5 +1,5 @@
 ##############################
-# Xenoist Faction
+# G8R
 ##############################
 
 gc_g8r = {
@@ -54,6 +54,7 @@ gc_g8r = {
 		OR = {
 			has_ethic = ethic_xenophile
 			has_ethic = ethic_fanatic_xenophile
+			has_ethic = ethic_egalitarian
 		}
 	}
 
@@ -64,6 +65,12 @@ gc_g8r = {
 			factor = 1000
 			exists = from
 			has_pop_flag = pop_assigned_to_g8r
+		}
+		
+		modifier = {
+			factor = 1.5
+			exists = from
+			Is_species_class = REP
 		}
 		
 		modifier = {
@@ -130,30 +137,6 @@ gc_g8r = {
 		}
 	}
 
-	demand = {
-		title = "XENOIST_PASSIVE_STUDY"
-		unfulfilled_title = "XENOIST_NO_PASSIVE_STUDY"
-		desc = "XENOIST_PASSIVE_STUDY_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -5
-
-		potential = {
-			exists = owner
-			owner = {
-				any_relation = {
-					is_country_type = primitive
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_policy_flag = interference_passive
-			}
-		}
-	}
-
 	demand = { # "XENOIST_NO_SLAVES"
 		title = "XENOIST_NO_SLAVES"
 		unfulfilled_title = "XENOIST_SLAVES"
@@ -209,32 +192,87 @@ gc_g8r = {
 		}
 	}
 
-	demand = { # "XENOIST_MULTICULTURALISM"
-		title = "XENOIST_MULTICULTURALISM"
-		unfulfilled_title = "XENOIST_NO_MULTICULTURALISM"
-		desc = "XENOIST_MULTICULTURALISM_DESC"
+	demand = {
+		title = "G8R_REPTILIANS_PLEASE"
+		unfulfilled_title = "G8R_REPTILIANS_PLEASE_UNFULFILLED"
+		desc = "G8R_REPTILIANS_PLEASE_DESC"
 
-		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
+		fulfilled_effect = 25
+		unfulfilled_effect = -5
 
 		potential = {
 			exists = owner
 			owner = {
 				num_communications > 3
-				any_owned_pop = {
-					NOR = {
-						is_same_species = root.owner
-						has_trait = trait_mechanical
-						has_trait = trait_machine_unit
-						has_trait = trait_hive_mind
-					}
-				}
 			}
 		}
 
 		trigger = {
 			owner = {
-				num_species > 3
+				any_owned_pop = {
+					is_species_class = REP
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "G8R_ARID_PLEASE"
+		unfulfilled_title = "G8R_ARID_PLEASE_UNFULFILLED"
+		desc = "G8R_ARID_PLEASE_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -5
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				any_owned_planet = {
+					is_planet_class = pc_arid
+				}
+			}
+		}
+	}
+	demand = {
+		title = "G8R_DESERT_PLEASE"
+		unfulfilled_title = "G8R_DESERT_PLEASE_UNFULFILLED"
+		desc = "G8R_DESERT_PLEASE_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -5
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				any_owned_planet = {
+					is_planet_class = pc_desert
+				}
+			}
+		}
+	}
+	demand = {
+		title = "G8R_SAVANNAH_PLEASE"
+		unfulfilled_title = "G8R_SAVANNAH_PLEASE_UNFULFILLED"
+		desc = "G8R_SAVANNA_PLEASE_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -5
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				any_owned_planet = {
+					is_planet_class = pc_savannah
+				}
 			}
 		}
 	}
@@ -260,36 +298,6 @@ gc_g8r = {
 		trigger = {
 			owner = {
 				has_policy_flag = refugees_allowed
-			}
-		}
-	}
-
-	demand = {
-		title = "XENOIST_ENCLAVE_BORDERS"
-		unfulfilled_title = "XENOIST_NO_ENCLAVE_BORDERS"
-		desc = "XENOIST_ENCLAVE_BORDERS_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				any_country = {
-					is_country_type = enclave
-					has_communications = root.owner
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				any_system_within_border = {
-					any_fleet_in_system = {
-						exists = owner
-						owner = { is_country_type = enclave }
-					}
-				}
 			}
 		}
 	}
@@ -371,48 +379,6 @@ gc_g8r = {
 		trigger = {
 			owner = {
 				has_policy_flag = pre_sapients_allow
-			}
-		}
-	}
-
-	demand = {
-		title = "XENOIST_NO_PRIMITIVE_INVASION" # Landgrab Opposition
-		unfulfilled_title = "XENOIST_NO_PRIMITIVE_INVASION"
-		desc = "XENOIST_NO_PRIMITIVE_INVASION_DESC"
-
-		unfulfilled_effect = -15
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner
-			owner = { has_country_flag = encountered_first_primitive }
-		}
-
-		trigger = {
-			owner = {
-				NOT = { has_country_flag = recent_primitive_invasion }
-			}
-		}
-	}
-
-	demand = {
-		title = "XENOIST_FEDERATED"
-		unfulfilled_title = "XENOIST_NOT_FEDERATED"
-		desc = "XENOIST_FEDERATED_DESC"
-
-		fulfilled_effect = 20
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				num_communications > 3
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_federation = yes
 			}
 		}
 	}

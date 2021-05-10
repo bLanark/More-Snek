@@ -1,0 +1,77 @@
+namespace = gc_roboleon
+
+country_event = {
+	id = gc_roboleon.2
+	title = gc_roboleon.2.title
+	desc = gc_roboleon.2.desc
+	picture = GFX_evt_roboleon
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	
+		create_species = {
+			name = Spare-part
+			plural = Spare-parts
+			class = ROBOT
+			namelist = HUM1
+			portrait = "default_robot"
+			traits = {
+				trait = "trait_mechanical"
+			}
+		}
+		
+		every_owned_planet = {
+			while = {
+				count = 3
+				create_pop = {
+					species = last_created_species
+					ethos = {
+						ethic = ethic_xenophile
+					}
+				}
+			}
+		}
+		
+		create_leader = {
+			name = "L30N Spare-part"
+			species = last_created_species
+			
+			class = ruler
+			
+			skill = 7
+			
+			set_age = 5
+			
+			traits = {
+				trait = trait_ruler_charismatic
+				trait = trait_ruler_champion_of_the_people
+				trait = leader_trait_reformer
+			}
+		}
+		
+		last_created_leader = {
+			set_leader_flag = roboleon
+			save_global_event_target_as = roboleon
+		}
+	}
+	
+	option = {
+		name = gc_roboleon.2.a
+		
+		clear_ethos = yes
+		shift_ethic = "ethic_xenophile"
+		shift_ethic = "ethic_fanatic_authoritarian"
+		
+		change_government = {
+			authority = auth_dictatorial
+			civics = {
+				civic = civic_free_haven
+				civic = civic_philosopher_king
+				civic = civic_cutthroat_politics
+			}
+		}
+
+		assign_leader = last_created_leader
+	}
+}

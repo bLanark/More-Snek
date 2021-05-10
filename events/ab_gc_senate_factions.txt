@@ -1,0 +1,239 @@
+namespace = gc_senate_factions
+
+country_event = {
+	id = gc_senate_factions.1
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+
+			random_owned_pop = {
+				limit = {
+					NOT = { has_pop_flag = pop_assigned_an_ethic }
+					is_pop_category = ruler
+				}
+				set_pop_flag = pop_assigned_an_ethic
+				set_pop_flag = pop_assigned_to_vph
+				pop_change_ethic = ethic_materialist
+			}
+			random_owned_pop = {
+				limit = {
+					NOT = { has_pop_flag = pop_assigned_an_ethic }
+					is_pop_category = ruler
+				}
+				set_pop_flag = pop_assigned_an_ethic
+				set_pop_flag = pop_assigned_to_imp
+				pop_change_ethic = ethic_authoritarian
+			}
+			
+			random_owned_pop = {
+				limit = {
+					NOT = { has_pop_flag = pop_assigned_an_ethic }
+					is_pop_category = specialist
+					has_job = bureaucrat
+				}
+				set_pop_flag = pop_assigned_an_ethic
+				set_pop_flag = pop_assigned_to_tbd
+				pop_change_ethic = ethic_pacifist
+			}
+			random_owned_pop = {
+				limit = {
+					NOT = { has_pop_flag = pop_assigned_an_ethic }
+					is_pop_category = specialist
+					has_job = bureaucrat
+				}
+				set_pop_flag = pop_assigned_an_ethic
+				set_pop_flag = pop_assigned_to_tbd
+				pop_change_ethic = ethic_pacifist
+			}
+			random_owned_pop = {
+				limit = {
+					NOT = { has_pop_flag = pop_assigned_an_ethic }
+					is_pop_category = specialist
+					has_job = researcher
+				}
+				set_pop_flag = pop_assigned_an_ethic
+				set_pop_flag = pop_assigned_to_sss
+				pop_change_ethic = ethic_egalitarian
+			}
+			#at this point we have 1 pop assigned for the VPH, 1 for Imps and 2 for the bureucrats. +1 one scientist for the SSS
+			
+			#1 for the G8r
+			random_owned_pop = {
+				limit = {
+					NOT = { has_pop_flag = pop_assigned_an_ethic }
+				}
+				set_pop_flag = pop_assigned_an_ethic
+				set_pop_flag = pop_assigned_to_g8r
+				pop_change_ethic = ethic_xenophile
+				set_pop_faction = gc_g8r
+			}
+			#2 for the cblt
+			while = {
+				count = 2
+				random_owned_pop = {
+					limit = {
+						NOT = { has_pop_flag = pop_assigned_an_ethic }
+					}
+					set_pop_flag = pop_assigned_an_ethic
+					set_pop_flag = pop_assigned_to_cblt
+					pop_change_ethic = ethic_xenophile
+					set_pop_faction = gc_cblt
+				}
+			}
+			#1 for the GTA
+			random_owned_pop = {
+				limit = {
+					NOT = { has_pop_flag = pop_assigned_an_ethic }
+				}
+				set_pop_flag = pop_assigned_an_ethic
+				set_pop_flag = pop_assigned_to_gta
+				pop_change_ethic = ethic_materialist
+				set_pop_faction = gc_gta
+			}
+			#2 for the GRP
+			while = {
+				count = 2
+				random_owned_pop = {
+					limit = {
+						NOT = { has_pop_flag = pop_assigned_an_ethic }
+					}
+					set_pop_flag = pop_assigned_an_ethic
+					set_pop_flag = pop_assigned_to_grp
+					pop_change_ethic = ethic_xenophobe
+				}
+			}
+			#2 for ADM
+			while = {
+				count = 2
+				random_owned_pop = {
+					limit = {
+						NOT = { has_pop_flag = pop_assigned_an_ethic }
+					}
+					set_pop_flag = pop_assigned_an_ethic
+					set_pop_flag = pop_assigned_to_adm
+					pop_change_ethic = ethic_militarist
+				}
+			}
+			#3 for sneks
+			while = {
+				count = 3
+				random_owned_pop = {
+					limit = {
+						NOT = { has_pop_flag = pop_assigned_an_ethic }
+					}
+					set_pop_flag = pop_assigned_an_ethic
+					set_pop_flag = pop_assigned_to_snek
+					pop_change_ethic = ethic_spiritualist
+				}
+			}
+			#3 for the sss since 1 is already a researcher
+			while = {
+				count = 3
+				random_owned_pop = {
+					limit = {
+						NOT = { has_pop_flag = pop_assigned_an_ethic }
+					}
+					set_pop_flag = pop_assigned_an_ethic
+					set_pop_flag = pop_assigned_to_sss
+					pop_change_ethic = ethic_egalitarian
+				}
+			}
+			#5 for the vph since 1 is already a ruler
+			while = {
+				count = 5
+				random_owned_pop = {
+					limit = {
+						NOT = { has_pop_flag = pop_assigned_an_ethic }
+					}
+					set_pop_flag = pop_assigned_an_ethic
+					set_pop_flag = pop_assigned_to_vph
+					pop_change_ethic = ethic_materialist
+				}
+			}
+			#7 for imps since 1 is already a ruler
+			while = {
+				count = 7
+				random_owned_pop = {
+					limit = {
+						NOT = { has_pop_flag = pop_assigned_an_ethic }
+					}
+					set_pop_flag = pop_assigned_an_ethic
+					set_pop_flag = pop_assigned_to_imp
+					pop_change_ethic = ethic_authoritarian
+				}
+			}
+			
+			enable_faction_of_type = gc_imp #8 pops
+			enable_faction_of_type = gc_vph #6 pops
+			enable_faction_of_type = gc_tbd #2 pops
+			enable_faction_of_type = gc_sss #4 pops
+			enable_faction_of_type = gc_adm #2 pops
+			#enable_faction_of_type = gc_rage #1 pops
+			enable_faction_of_type = gc_snek #3 pops
+			enable_faction_of_type = gc_g8r #1 pops
+			enable_faction_of_type = gc_cblt #2 pops
+			enable_faction_of_type = gc_grp #2 pops
+			enable_faction_of_type = gc_gta #1 pops
+			
+
+		
+	}
+}
+
+country_event = {
+	id = gc_senate_factions.3
+	title = gc_senate_factions.3.title
+	desc = gc_senate_factions.3.desc
+	picture = GFX_evt_galactic_senate
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 2 }
+	
+	trigger = {
+		is_ai = no
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				capital_scope = {
+					has_planet_flag = planet_earth
+				}
+			}
+			set_country_flag = grand_campaign_player_one
+		}
+		else_if = {
+			limit = {
+				capital_scope.solar_system = {
+					has_star_flag = deneb_system
+				}
+			}
+			set_country_flag = grand_campaign_player_two
+		}
+	}
+	
+	option = {
+		name = gc_senate_factions.3.a
+		
+		set_country_flag = grand_campaign_senate
+		
+		hidden_effect = {
+			country_event = {
+				id = gc_senate_factions.1
+				days = 1
+			}
+		}
+	}
+	
+	option = {
+		name = gc_senate_factions.3.b
+		
+		set_country_flag = grand_campaign_senate
+	}
+	
+	option = {
+		name = gc_senate_factions.3.c
+	}
+}

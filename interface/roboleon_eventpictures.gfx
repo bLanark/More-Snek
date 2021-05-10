@@ -1,0 +1,11 @@
+spriteTypes = {
+
+
+	spriteType = {
+		name = "GFX_evt_roboleon"
+		texturefile = "gfx/event_pictures/roboleon.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes		
+	}
+
+}

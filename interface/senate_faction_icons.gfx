@@ -1,0 +1,71 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_faction_icon_gc_imp"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_gc_imp.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_gc_vph"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_gc_vph.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_gc_tbd"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_gc_tbd.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_gc_sss"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_gc_sss.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_gc_adm"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_gc_adm.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_gc_rage"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_gc_rage.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_gc_snek"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_gc_snek.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_gc_g8r"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_gc_g8r.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_gc_cblt"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_gc_cblt.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_gc_grp"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_gc_grp.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_faction_icon_gc_gta"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_gc_gta.dds"
+		noOfFrames = 1
+	}
+	
+	
+
+}

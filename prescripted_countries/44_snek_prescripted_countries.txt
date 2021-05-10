@@ -1,16 +1,16 @@
-"Holy Victorious Empire" = {
-	name = "Holy Victorious Empire"
-	adjective = "Victorious"
+"Crusaders of Cygnus" = {
+	name = "Crusaders of Cygnus"
+	adjective = "Crusader"
 	spawn_enabled = yes # yes / no / always
 	
 	ship_prefix = "HISS"
 	
 	species = {
 		class = "HUM"
-		portrait = "humanoid_02"
-		name = "Snekist"
-		plural = "Snekists"
-		adjective = "Snekist"
+		portrait = "human"
+		name = "Human"
+		plural = "Humans"
+		adjective = "Human"
 		name_list = "REP1"
 		trait = "trait_wasteful"
 		trait = "trait_communal"
@@ -21,9 +21,12 @@
 	
 	room = "personality_slaving_despots_room"
 	
-	authority = "auth_dictatorial" #"auth_oligarchic"
-	civics = { "civic_exalted_priesthood" "civic_philosopher_king"}
-	government = gov_elective_monarchy #"gov_holy_tribunal"
+	authority="auth_corporate"
+	civics={
+		"civic_gospel_of_the_masses"
+		"civic_criminal_heritage"
+	}
+	government="gov_subversive_cult"
 	origin = "origin_lost_colony"
 	advisor_voice_type="l_necroid_vir"
 
@@ -34,6 +37,8 @@
 	planet_class = "pc_continental"
 	initializer = "deneb_system"
 	system_name = "Cygnus"
+
+	flags = { grand_campaign_player_two }
 
 	graphical_culture="necroid_01"
 	city_graphical_culture = "mammalian_01"

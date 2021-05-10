@@ -1,0 +1,6 @@
+on_press_begin = {
+	events = {
+		gc_gamestart.1 #this marks the human empire on earth player one
+		gc_gamestart.2 #this changes CoC humans into scaly
+	}
+}

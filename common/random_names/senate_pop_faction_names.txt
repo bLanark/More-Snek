@@ -1,0 +1,205 @@
+## Senate
+
+pop_faction_name_parts_list = {
+	key = "imp_name_1"
+	parts = {
+		"The Imperial Party" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "vph_name_1"
+	parts = {
+		"Victorian Prosperity Hawks" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "tbd_name_1"
+	parts = {
+		"The Bureucratic Department" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "sss_name_1"
+	parts = {
+		"Soil, Sails and Science" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "adm_name_1"
+	parts = {
+		"The Admirals Party" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "rad_name_1"
+	parts = {
+		"Random Apocalypse Generator" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "snek_name_1"
+	parts = {
+		"The Bordergore party of Snek" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "rage_name_1"
+	parts = {
+		"Random Apocalypse Generator" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "g8r_name_1"
+	parts = {
+		"The Fire Platy-gator Congress" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "cblt_name_1"
+	parts = {
+		"The Illustrious Liberal Chambers of Burghers and Tradefolk" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "grp_name_1"
+	parts = {
+		"The Glorious Revolution Party" = 1
+	}
+}
+
+pop_faction_name_parts_list = {
+	key = "gta_name_1"
+	parts = {
+		"The Grand Trust Alliance" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gc_imp"
+		}
+	}
+	format = "<imp_name_1>"
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gc_vph"
+		}
+	}
+	format = "<vph_name_1>"
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gc_sss"
+		}
+	}
+	format = "<sss_name_1>"
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gc_tbd"
+		}
+	}
+	format = "<tbd_name_1>"
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gc_adm"
+		}
+	}
+	format = "<adm_name_1>"
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gc_rage"
+		}
+	}
+	format = "<rage_name_1>"
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gc_snek"
+		}
+	}
+	format = "<snek_name_1>"
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gc_g8r"
+		}
+	}
+	format = "<g8r_name_1>"
+}
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gc_cblt"
+		}
+	}
+	format = "<cblt_name_1>"
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gc_grp"
+		}
+	}
+	format = "<grp_name_1>"
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 100
+			is_pop_faction_type = "gc_gta"
+		}
+	}
+	format = "<gta_name_1>"
+}

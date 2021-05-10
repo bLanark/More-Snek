@@ -1,0 +1,186 @@
+namespace = snek
+
+country_event = {
+	id = snek.1
+	title = "snek.1.name"
+	desc = "snek.1.desc"
+	picture = GFX_evt_ancient_alien_temple
+	location = root
+	show_sound = notification_uplift
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	trigger = {
+		years_passed < 57
+		is_ai = no
+	}
+
+
+	option = {
+		name = snek.1.a
+		add_resource = { unity = 200}	
+		add_resource = { influence = 50}
+	}
+}
+country_event = {
+	id = snek.2
+	title = "snek.2.name"
+	desc = "snek.2.desc"
+	picture = GFX_evt_galactic_senate
+	location = root
+	show_sound = notification_uplift
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		years_passed < 57
+		is_ai = no
+	}
+
+
+	option = {
+		name = snek.2.a
+		add_modifier = {
+			modifier = imperial_ambition 
+			days = -1
+		}
+	}
+}
+country_event = {
+	id = snek.3
+	title = "snek.3.name"
+	desc = "snek.3.desc"
+	picture = GFX_evt_galactic_community
+	location = root
+	show_sound = notification_uplift
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		years_passed < 57
+		is_ai = no
+	}
+
+
+	option = {
+		name = snek.3.a
+		add_modifier = {
+			modifier = peacekeepers 
+			days = -1
+		}
+	}
+}
+
+planet_event = {
+	id = snek.6
+	title = "snek.6.name"
+	desc = "snek.6.desc"
+	
+	fire_only_once = yes
+	
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = no
+		original_owner = yes
+		is_ai = no
+		has_ground_combat = no
+	}
+
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = snek.6.a
+		pop_event = { id = snek.10 }
+		random_list = {
+			50 = {
+				country_event = { id = snek.7 days = 1 random = 20 }
+			}
+			50 = {
+				planet = {
+					planet_event = { id = snek.8 days = 1 random = 20 }
+				}
+			}
+		}
+
+	}
+}
+
+pop_event = {
+	id = snek.10
+	hide_window = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		name = snek.7.a
+		create_pop = {
+			species = event_target:random_species
+			ethos = {
+				ethic = "ethic_fanatic_spiritualist"
+			}
+		}
+		create_pop = {
+			species = event_target:random_species
+			ethos = {
+				ethic = "ethic_fanatic_materialist"
+			}
+		}	
+	}	
+}
+
+country_event = {
+	id = snek.7
+	title = "snek.7.name"
+	desc = "snek.7.desc"
+	picture = GFX_evt_news_room
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = snek.7.a
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier2unityreward
+		}	
+		add_monthly_resource_mult = {
+			resource = influence
+			value = @tier2unityreward
+		}
+	}
+}
+planet_event = {
+	id = snek.8
+	title = "snek.8.name"
+	desc = "snek.8.desc"
+	picture = GFX_evt_open_revolt
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = snek.8.a
+		FROM = { kill_pop = yes }
+	}
+}

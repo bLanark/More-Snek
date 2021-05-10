@@ -1,0 +1,6 @@
+imperial_ambition = {
+	diplo_weight_mult = 0.1
+}
+peacekeepers = {
+	diplo_weight_mult = 0.1
+}

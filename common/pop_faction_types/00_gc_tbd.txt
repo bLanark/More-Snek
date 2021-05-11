@@ -70,7 +70,10 @@ gc_tbd = {
 			exists = from
 			has_pop_flag = pop_assigned_to_tbd
 		}
-		
+		modifier = {
+			factor = 1.25
+			has_job = bureucrat
+		}
 		modifier = {
 			factor = 1.25
 			exists = from
@@ -108,7 +111,7 @@ gc_tbd = {
 		base = 100
 
 		modifier = {
-			factor = 0.0
+			factor = 0.5
 			OR = {
 				leader_class = admiral
 				leader_class = general
@@ -164,32 +167,6 @@ gc_tbd = {
 	}
 
 	demand = {
-		title = "PROSPERITY_PHILOSOPHY"
-		unfulfilled_title = "PROSPERITY_NO_PHILOSOPHY"
-		desc = "PROSPERITY_PHILOSOPHY_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -10
-
-		potential = {
-			exists = owner
-			owner = {
-				any_relation = {
-					has_communications = root.owner
-					is_country_type = default
-					NOT = { exists = overlord }
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_policy_flag = no_wars
-			}
-		}
-	}
-
-	demand = {
 		title = "PROSPERITY_PEACE"
 		unfulfilled_title = "PROSPERITY_NO_PEACE"
 		desc = "PROSPERITY_PEACE_DESC"
@@ -204,31 +181,6 @@ gc_tbd = {
 		trigger = {
 			owner = {
 				is_at_war = no
-			}
-		}
-	}
-
-	demand = {
-		title = "PROSPERITY_NOT_AGGRESSOR"
-		unfulfilled_title = "PROSPERITY_AGGRESSOR"
-		desc = "PROSPERITY_NOT_AGGRESSOR_DESC"
-
-		unfulfilled_effect = -30
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				num_communications > 2
-			}
-		}
-
-		trigger = {
-			owner = {
-				NOR = {
-					has_country_flag = entered_war_as_attacker
-					any_war = { is_war_participant = { who = prev side = attackers } }
-				}
 			}
 		}
 	}
@@ -298,11 +250,63 @@ gc_tbd = {
 			}
 		}
 	}
-
+	
 	demand = {
-		title = "MERCANTILE_DIPLO_STANCE"
-		unfulfilled_title = "MERCANTILE_DIPLO_STANCE"
-		desc = "MERCANTILE_DIPLO_STANCE_DESC"
+		title = "TBD_BUREUCRATS_EVERYWHERE"
+		unfulfilled_title = "TBD_BUREUCRATS_EVERYWHERE_UNFULFILLED"
+		desc = "TBD_BUREUCRATS_EVERYWHERE_DESC"
+		
+		fulfilled_effect = 0.001
+		unfulfilled_effect = -10
+		
+		potential = {
+			exists = owner
+		}
+		
+		trigger = {
+			owner = {
+				NOT = {
+					any_owned_planet = {
+						NOT = {
+							OR = {
+								has_building = building_bureaucratic_1
+								has_building = building_bureaucratic_2
+								has_building = building_bureaucratic_3
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	demand = {
+		title = "TBD_BUREUCRACY_PLANET"
+		unfulfilled_title = "TBD_BUREUCRACY_PLANET_UNFULFILLED"
+		desc = "TBD_BUREUCRACY_PLANET_DESC"
+		
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+		
+		potential = {
+			exists = owner
+			owner = {
+				num_owned_planets > 1
+			}
+		}
+		
+		trigger = {
+			owner = {
+				any_owned_planet = {
+					has_designation = col_bureau
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "COOPERATIVE_DIPLO_STANCE"
+		unfulfilled_title = "COOPERATIVE_DIPLO_STANCE"
+		desc = "COOPERATIVE_DIPLO_STANCE_DESC"
 
 		fulfilled_effect = 10
 		unfulfilled_effect = -0.001
@@ -312,13 +316,13 @@ gc_tbd = {
 			owner = {
 				is_homicidal = no
 				is_country_type = default
-				has_policy_flag = diplo_stance_mercantile
+				has_policy_flag = diplo_stance_cooperative
 			}
 		}
 
 		trigger = {
 			owner = {
-				has_policy_flag = diplo_stance_mercantile
+				has_policy_flag = diplo_stance_cooperative
 			}
 		}
 	}
@@ -378,7 +382,7 @@ gc_tbd = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				influence = 250
 			}
 
 			potential = {
@@ -455,7 +459,7 @@ gc_tbd = {
 						owner = {
 							exists = ruler
 							ruler = {
-								leader_of_faction = prosperity
+								leader_of_faction = gc_tbd
 							}
 						}
 					}

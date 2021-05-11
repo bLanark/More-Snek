@@ -304,7 +304,7 @@ gc_imp = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				influence = 250
 			}
 
 			potential = {
@@ -381,7 +381,7 @@ gc_imp = {
 						owner = {
 							exists = ruler
 							ruler = {
-								leader_of_faction = totalitarian
+								leader_of_faction = gc_imp
 							}
 						}
 					}

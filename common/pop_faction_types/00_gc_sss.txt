@@ -114,10 +114,11 @@ gc_sss = {
 			owner = { has_authority = auth_oligarchic }
 		}
 
-		#modifier = {
-		#	factor = 0.0
-		#	is_event_leader = yes
-		#}
+		modifier = {
+			factor = 1.25
+			leader_class = scientist
+		}
+	
 	}
 
 	demand = {
@@ -276,6 +277,9 @@ gc_sss = {
 
 		potential = {
 			exists = owner
+			owner = {
+				has_technology = tech_synthetic_workers
+			}
 		}
 
 		trigger = {
@@ -367,7 +371,7 @@ gc_sss = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				influence = 250
 			}
 
 			potential = {
@@ -444,7 +448,7 @@ gc_sss = {
 						owner = {
 							exists = ruler
 							ruler = {
-								leader_of_faction = progressive
+								leader_of_faction = gc_sss
 							}
 						}
 					}

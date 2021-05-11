@@ -1,10 +1,40 @@
 ﻿l_english:
-
+ 
+ VPH_TOO_PACIFIST: "We are already pacifist. Going further towards egalitarianism would be fanaticism."
+ 
+ VPH_NO_FANATICISM: "All Voices Heard"
+ VPH_NO_FANATICISM_UNFULFILLED: "Fanaticism in the Senate"
+ VPH_NO_FANATICISM_DESC: "[Root.GetName] has for centuries been a moderator faction in the Senate and to this day works hard to find common ground between all factions. Keeping our senate away from §Yfanatic ethos§! will keep the [Root.GetName] content."
+ 
  gc_senate_factions.3.title: "Senate Factions Submod"
  gc_senate_factions.3.desc: "Hello! This is a pop-up to configure a submod that enables modded factions from the Grand Campaign Senate for your nation. These factions are derived, but heavily modified from the vanilla ones and represent the political agendas of the player created senate parties. Below, there are three options to go with: you can either choose to use the mod with §Yweighted ideolodies§! or without them, or disable the modded factions alltogether.\n\nWith §Yweighted ideologies§! feature on, your pops get their ethics changed so that it represents the senate composition. This means that the starting ethics of your pops will change. The pops will be locked to their ideologies for some time, but later be able to change between parties normally.\n\nIf you choose to enable the mod without weighted ideologies, the modded factions will still show up, but with less guarantee that every party will appear at all. \n\nThe third option is to not use the modded factions at all and play with vanilla factions.\n\nHave a good game!\n\n-AlexanderBoesen"
  gc_senate_factions.3.a: "Use Senate factions §Gwith§! §Yweighted ideologies§!"
  gc_senate_factions.3.b: "Use Senate factions §Rwithout§! §Yweighted ideologies§!"
  gc_senate_factions.3.c: "Use vanilla faction mechanics"
+ 
+ TBD_BUREUCRATS_EVERYWHERE: "Bureucrats on Every Planet"
+ TBD_BUREUCRATS_EVERYWHERE_UNFULFILLED: "No Bureucrats on Every Planet"
+ TBD_BUREUCRATS_EVERYWHERE_DESC: "No government can function without bureucracy. Ensuring that every planet has at least one §YBureucracy Building§! will keep the [Root.GetName] content."
+ 
+ TBD_BUREUCRACY_PLANET: "A Planet Dedicated to Bureucracy"
+ TBD_BUREUCRACY_PLANET_UNFULFILLED: "No Planet Dedicated to Bureucracy""
+ TBD_BUREUCRACY_PLANET_DESC: "As our stellar bureucratic apparatus expands, it's clear that at least one of our colonies should be dedicated fully as a §YBureucratic Center§!."
+ 
+ SNEK_WORMHOLE: "A Wormhole Within Our Borders"
+ SNEK_WORMHOLE_UNFULFILLED: "No Wormhole Inside Our Borders"
+ SNEK_WORMHOLE_DESC: "[Root.GetName] will be pleased if at least one §YWormhole§! exists within our borders."
+ 
+ SNEK_OPRESSION: "No Opression of Reptiles"
+ SNEK_OPRESSION_UNFULFILLED: "Opression of Reptiles!"
+ SNEK_OPRESSION_DESC: "All reptilian species must enjoy full citizenship rights. Having any §YReptilian§! species with the citizenship types §YResidence§!, §YSlavery§! or §YPurge§! will anger [Root.GetName]."
+ SNEK_STRONG_DIPLO_STANCE_DESC:0 "Having a §Y$diplo_stance_belligerent$§!, §Y$diplo_stance_expansionist$§! or §Y$diplo_stance_supremacist$§! Diplomatic Stance pleases the [Root.GetName]."
+ 
+ GTA_ALLOYSGOODS1: "Shortage on Industry Production"
+ GTA_ALLOYSGOODS1_UNFULFILLED: "Shortage on Industry Production"
+ GTA_ALLOYSGOODS1_DESC: "Our industrial net production must always positive. We should make sure that we are producing a surplus of §YAlloys§! and §YConsumer Goods§!."
+ GTA_ALLOYSGOODS2: "Healthy Industry Production"
+ GTA_ALLOYSGOODS2_UNFULFILLED: "Compromised Industry Production"
+ GTA_ALLOYSGOODS2_DESC: "To maintain a healthy economy we must maintain a healthy industry. By making sure we are always producing a surplus amount of §Y100 Alloys§! and §Y100 Consumer Goods§! will please [Root.GetName]."
 
  G8R_REPTILIANS_PLEASE: "Reptilians in our midst!"
  G8R_REPTILIANS_PLEASE_UNFULFILLED: "No Reptilian Species"
@@ -12,30 +42,30 @@
  
  G8R_SAVANNAH_PLEASE: "Vast Hot Savannahs"
  G8R_SAVANNAH_PLEASE_UNFULFILLED: "No Vast Hot Savannahs"
- G8R_SAVANNAH_PLEASE_DESC: "The [Root.GetName] has always priorized colonization of nice, warm lands. We need to continue this tradition by ensuring that there is at least one §YSavannah§! planet inhabited by us!"
+ G8R_SAVANNAH_PLEASE_DESC: "[Root.GetName] has always priorized colonization of nice, warm lands. We need to continue this tradition by ensuring that there is at least one §YSavannah§! planet inhabited by us!"
  
- G8R_SAVANNAH_PLEASE: "Burning Arid Wastes"
- G8R_SAVANNAH_PLEASE_UNFULFILLED: "No Burning Arid Wastes"
- G8R_SAVANNAH_PLEASE_DESC: "The [Root.GetName] has always priorized colonization of nice, warm lands. We need to continue this tradition by ensuring that there is at least one §YArid§! planet inhabited by us!"
+ G8R_ARID_PLEASE: "Burning Arid Wastes"
+ G8R_ARID_PLEASE_UNFULFILLED: "No Burning Arid Wastes"
+ G8R_ARID_PLEASE_DESC: "[Root.GetName] has always priorized colonization of nice, warm lands. We need to continue this tradition by ensuring that there is at least one §YArid§! planet inhabited by us!"
  
- G8R_SAVANNAH_PLEASE: "Hot Desert Sands"
- G8R_SAVANNAH_PLEASE_UNFULFILLED: "No Hot Desert Sands
- G8R_SAVANNAH_PLEASE_DESC: "The [Root.GetName] has always priorized colonization of nice, warm lands. We need to continue this tradition by ensuring that there is at least one §YDesert§! planet inhabited by us!"
+ G8R_DESERT_PLEASE: "Hot Desert Sands"
+ G8R_DESERT_PLEASE_UNFULFILLED: "No Hot Desert Sands"
+ G8R_DESERT_PLEASE_DESC: "[Root.GetName] has always priorized colonization of nice, warm lands. We need to continue this tradition by ensuring that there is at least one §YDesert§! planet inhabited by us!"
  
  ADM_LEAKY_BOATS: "A Pristine Navy!"
- ADM_LEAKY_BOATS_UNFULLFILLED: "Leaky Boats!"
+ ADM_LEAKY_BOATS_UNFULFILLED: "Leaky Boats!"
  ADM_LEAKY_BOATS_DESC: "Having a state of the art grand navy pleases the [Root.GetName]. We must ensure that we are always using more than §Y50%§! of our §Ynaval capacity!§!"
  
- ADM_LANDLUBBERS: "No Landlubber foolery!"
- ADM_LANDLUBBERS_UNFULLFILLED: "Landlubber foolery!"
+ ADM_LANDLUBBERS: "No Landlubber Foolery!"
+ ADM_LANDLUBBERS_UNFULFILLED: "Landlubber foolery!"
  ADM_LANDLUBBERS_DESC: "War has changed. It would be cruel mockery of our armed forces to entertain the foolish, bygone pastime of fighting on steady surfaces. The time of §YWarrior Culture§ is over."
  
  ADM_GOODOLDBOYS: "Good Old Boys!"
- ADM_GOODOLDBOYS_UNFULLFILLED: "Abandoned Our Old Boys!"
+ ADM_GOODOLDBOYS_UNFULFILLED: "Abandoned Our Old Boys!"
  ADM_GOODOLDBOYS_DESC: "Our naval tradition is strong and what is a spaceship if not a sea vessel... in space? As everyone knows that space warfare is pretty much similar to naval warfare, it is only natural that our naval heritage carries from our homeworld's waters to the cold waters of the void. Having the §YDistinguished Admirality§! civic is least we should do to honour our heritage!"
  
  ADM_LOOKINGFORMATEYS: "Fresh Mateys from Galactic Harbours!"
- ADM_LOOKINGFORMATEYS_UNFULLFILLED: "Looking For Mateys!"
+ ADM_LOOKINGFORMATEYS_UNFULFILLED: "Looking For Mateys!"
  ADM_LOOKINGFORMATEYS_DESC: "In the vast ocean of space there will always be fresh mateys to be enlisted. These hardy daredevils wait in galactic harbours for their chances to find their fate in the stars. Having §YEnclaves§! inside our borders ensures that fresh mateys from these station can always be on the lookout for adventure and join a passing navy!"
  
  ADM_RIVALS1: "Rivalry Done Right!"

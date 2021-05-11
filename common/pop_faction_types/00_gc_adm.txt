@@ -93,7 +93,16 @@ gc_adm = {
 
 	leader = {
 		base = 100
-
+		
+		modifier = {
+			factor = 2
+			leader_class = admiral
+		}
+		modifier = {
+			factor = 0.5
+			leader_class = general
+		}
+		
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
@@ -401,7 +410,7 @@ gc_adm = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				influence = 250
 			}
 
 			potential = {
@@ -478,7 +487,7 @@ gc_adm = {
 						owner = {
 							exists = ruler
 							ruler = {
-								leader_of_faction = imperialist
+								leader_of_faction = gc_adm
 							}
 						}
 					}

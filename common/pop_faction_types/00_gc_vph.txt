@@ -1,20 +1,13 @@
 ##############################
-# Technologist Faction
+# Peaceful Prosperity Faction
 ##############################
 
 gc_vph = {
 	election_header = "GFX_faction_header_yellow"
-	guiding_ethic = ethic_materialist
+	guiding_ethic = ethic_pacifist
 
 	unique = yes
 	support_multiplier = 1
-
-	resources = {
-		category = pop_factions
-		produces = {
-			influence = 2
-		}
-	}
 
 	is_potential = {
 		# THIS IS ADDED BY THE MOD
@@ -97,28 +90,6 @@ gc_vph = {
 	}
 
 	demand = {
-		title = "TECHNOLOGIST_ROBOTS_ALLOWED"
-		unfulfilled_title = "TECHNOLOGIST_ROBOTS_BANNED"
-		desc = "TECHNOLOGIST_ROBOTS_ALLOWED_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -30
-
-		potential = {
-			exists = owner
-		}
-
-		trigger = {
-			owner = {
-				NOR = {
-					has_policy_flag = robots_outlawed
-					has_policy_flag = ai_outlawed
-				}
-			}
-		}
-	}
-
-	demand = {
 		title = "FACTION_OUTRAGED_GC"
 		unfulfilled_title = "FACTION_OUTRAGED_GC"
 		desc = "FACTION_OUTRAGED_GC_DESC"
@@ -129,72 +100,143 @@ gc_vph = {
 		potential = {
 			exists = owner
 			owner = {
-				has_country_flag = faction_materialist_outraged_gc
+				has_country_flag = faction_pacifist_outraged_gc
 			}
 		}
 
 		trigger = {
 			owner = {
-				has_country_flag = faction_materialist_outraged_gc
+				has_country_flag = faction_pacifist_outraged_gc
+			}
+		}
+	}
+	
+	demand = {
+		title = "VPH_NO_FANATICISM"
+		unfulfilled_title = "VPH_NO_FANATICISM_UNFULFILLED"
+		desc = "VPH_NO_FANATICISM_DESC"
+		
+		fulfilled_effect = 0.001
+		unfulfilled_effect = -10
+
+		potential = {
+			exists = owner
+		}
+		
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_fanatic_egalitarian
+					has_ethic = ethic_fanatic_spiritualist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "PROSPERITY_LIQUIDITY"
+		unfulfilled_title = "PROSPERITY_NO_LIQUIDITY"
+		desc = "PROSPERITY_LIQUIDITY_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				num_owned_planets >= 3
+			}
+		}
+
+		trigger = {
+			owner = { resource_stockpile_compare = { resource = energy value >= 5000 } }
+		}
+	}
+
+	demand = {
+		title = "PROSPERITY_PEACE"
+		unfulfilled_title = "PROSPERITY_NO_PEACE"
+		desc = "PROSPERITY_PEACE_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -10
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				is_at_war = no
 			}
 		}
 	}
 
 	demand = {
-		title = "TECHNOLOGIST_TECH_LEAP"
-		unfulfilled_title = "TECHNOLOGIST_TECH_LAG"
-		desc = "TECHNOLOGIST_TECH_LEAP_DESC"
+		title = "PROSPERITY_NOT_AGGRESSOR"
+		unfulfilled_title = "PROSPERITY_AGGRESSOR"
+		desc = "PROSPERITY_NOT_AGGRESSOR_DESC"
 
-		fulfilled_effect = 10
-		unfulfilled_effect = -20
+		unfulfilled_effect = -30
+		fulfilled_effect = 0.001
 
 		potential = {
 			exists = owner
 			owner = {
-				any_relation = {
-					has_communications = root.owner
-					is_country_type = default
-					NOT = { has_government = gov_successor_khanate }
-					root.owner = {
-						has_intel_level = {
-							who = prev
-							category = technology
-							level >= 1
-						}
-					}
-				}
+				num_communications > 2
+			}
+		}
+
+		trigger = {
+			owner = {
 				NOR = {
-					has_country_flag = primitives_can_into_space
-					is_subject = yes
+					has_country_flag = entered_war_as_attacker
+					any_war = { is_war_participant = { who = prev side = attackers } }
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "PROSPERITY_PEACEFUL_APPLICATIONS"
+		unfulfilled_title = "PROSPERITY_NO_PEACEFUL_APPLICATIONS_APPLICATIONS"
+		desc = "PROSPERITY_PEACEFUL_APPLICATIONS_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				host_has_dlc = "Ancient Relics Story Pack"
+				has_technology = tech_arcane_deciphering
+				OR = {
+					has_modifier = artifact_find_peaceful_application_happy_bios
+					has_modifier = artifact_find_peaceful_application_consumer_goods
+					has_modifier = artifact_find_peaceful_application_amenities
+					has_modifier = artifact_find_peaceful_application_leader_improvement
 				}
 			}
 		}
 
 		trigger = {
 			owner = {
-				NOT = {
-					any_relation = {
-						has_communications = root.owner
-						is_country_type = default
-						NOT = { has_government = gov_successor_khanate }
-						root.owner = {
-							has_intel_level = {
-								who = prev
-								category = technology
-								level >= 1
-							}
-						}
-						relative_power = {
-							who = root.owner
-							category = technology
-							value > equivalent
-						}
-					}
+				OR = {
+					has_modifier = artifact_find_peaceful_application_happy_bios
+					has_modifier = artifact_find_peaceful_application_consumer_goods
+					has_modifier = artifact_find_peaceful_application_amenities
+					has_modifier = artifact_find_peaceful_application_leader_improvement
 				}
 			}
 		}
 	}
-
+	
 	demand = {
 		title = "TECHNOLOGIST_RESEARCH_TREATIES"
 		unfulfilled_title = "TECHNOLOGIST_FEW_RESEARCH_TREATIES"
@@ -231,154 +273,13 @@ gc_vph = {
 			}
 		}
 	}
-
-	demand = {
-		title = "TECHNOLOGIST_NO_SYNTH_ENVY"
-		unfulfilled_title = "TECHNOLOGIST_SYNTH_ENVY"
-		desc = "TECHNOLOGIST_NO_SYNTH_ENVY_DESC"
-
-		unfulfilled_effect = -10
-		fulfilled_effect = 0.001
-
-		potential = {
-			years_passed >= 50 #otherwise, just a penalty for meeting Mechanists early
-			exists = owner
-			owner = {
-				NOT = { has_ascension_perk = ap_synthetic_evolution }
-				any_relation = {
-					has_communications = root.owner
-					root.owner = {
-						has_intel_level = {
-							who = prev
-							category = economy
-							level >= 1
-						}
-					}
-					is_gestalt = no
-					any_owned_species = {
-						OR = {
-							has_trait = trait_mechanical
-							has_trait = trait_cybernetic
-						}
-					}
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				any_owned_species = {
-					OR = {
-						has_trait = trait_mechanical
-						has_trait = trait_cybernetic
-					}
-				}
-			}
-		}
-	}
-
-	on_create = {
-		pop_faction_event = { id = factions.1 }
-	}
-
-	demand = {
-		title = "TECHNOLOGIST_SECRET_KNOWLEDGE"
-		unfulfilled_title = "TECHNOLOGIST_NO_SECRET_KNOWLEDGE"
-		desc = "TECHNOLOGIST_SECRET_KNOWLEDGE_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					has_modifier = fallen_empire_gift_databanks
-					has_modifier = curator_insight
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					has_modifier = fallen_empire_gift_databanks
-					has_modifier = curator_insight
-				}
-			}
-		}
-	}
-
-	demand = {
-		title = "TECHNOLOGIST_ARCANA"
-		unfulfilled_title = "TECHNOLOGIST_NO_ARCANA"
-		desc = "TECHNOLOGIST_ARCANA_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					has_modifier = arcane_deciphering_cooldown
-					has_modifier = arcane_insight
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					has_modifier = arcane_deciphering_cooldown
-					has_modifier = arcane_insight
-				}
-			}
-		}
-	}
-
-	demand = {
-		title = "TECHNOLOGIST_PRECURSOR_SECRETS"
-		unfulfilled_title = "TECHNOLOGIST_NO_PRECURSOR_SECRETS"
-		desc = "TECHNOLOGIST_PRECURSOR_SECRETS_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					has_modifier = artifact_cybrex_research_completed
-					has_modifier = artifact_irassian_research_completed
-					has_modifier = artifact_league_research_completed
-					has_modifier = artifact_vultaum_research_completed_suppressed
-					has_modifier = artifact_vultaum_research_completed_public
-					has_country_flag = artifact_yuht_research_completed
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					has_modifier = artifact_cybrex_research_completed
-					has_modifier = artifact_irassian_research_completed
-					has_modifier = artifact_league_research_completed
-					has_modifier = artifact_vultaum_research_completed_suppressed
-					has_modifier = artifact_vultaum_research_completed_public
-					has_country_flag = artifact_yuht_research_completed
-				}
-			}
-		}
-	}
-
+	
 	demand = {
 		title = "COOPERATIVE_DIPLO_STANCE"
 		unfulfilled_title = "COOPERATIVE_DIPLO_STANCE"
 		desc = "COOPERATIVE_DIPLO_STANCE_DESC"
 
-		fulfilled_effect = 5
+		fulfilled_effect = 10
 		unfulfilled_effect = -0.001
 
 		potential = {
@@ -397,18 +298,52 @@ gc_vph = {
 		}
 	}
 
+	demand = {
+		title = "AGGRESSIVE_DIPLO_STANCE"
+		unfulfilled_title = "AGGRESSIVE_DIPLO_STANCE"
+		desc = "AGGRESSIVE_DIPLO_STANCE_DESC"
+
+		fulfilled_effect = 0.001
+		unfulfilled_effect = -10
+
+		potential = {
+			exists = owner
+			owner = {
+				is_homicidal = no
+				is_country_type = default
+				OR = {
+					has_policy_flag = diplo_stance_belligerent
+					has_policy_flag = diplo_stance_supremacist
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOR = {
+					has_policy_flag = diplo_stance_belligerent
+					has_policy_flag = diplo_stance_supremacist
+				}
+			}
+		}
+	}
+
+	on_create = {
+		pop_faction_event = { id = factions.1 }
+	}
+
 	on_destroy = {
 		if = {
 			limit = {
-				has_modifier = promoted_materialist
+				has_modifier = promoted_pacifist
 			}
-			remove_modifier = promoted_materialist
+			remove_modifier = promoted_pacifist
 		}
 		if = {
 			limit = {
-				has_modifier = suppressed_materialist
+				has_modifier = suppressed_pacifist
 			}
-			remove_modifier = suppressed_materialist
+			remove_modifier = suppressed_pacifist
 		}
 	}
 
@@ -418,7 +353,7 @@ gc_vph = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				influence = 250
 			}
 
 			potential = {
@@ -438,16 +373,22 @@ gc_vph = {
 						NOT = { has_modifier = embraced_faction_timer }
 					}
 				}
+				custom_tooltip = {
+					fail_text = VPH_TOO_PACIFIST
+					parameter:empire = {
+						has_ethic = ethic_pacifist
+					}
+				}
 				support > 0.20
 				parameter:empire = {
-					NOT = { has_ethic = "ethic_fanatic_materialist" }
+					NOT = { has_ethic = "ethic_fanatic_pacifist" }
 				}
 			}
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
 				parameter:empire = {
-					shift_ethic = ethic_materialist
+					shift_ethic = ethic_pacifist
 					hidden_effect = {
 						add_modifier = { modifier = embraced_faction_timer days = 3600 }
 						every_pop_faction = {
@@ -482,7 +423,7 @@ gc_vph = {
 					factor = 0
 					support < 0.50
 					owner = {
-						has_ethic = ethic_materialist
+						has_ethic = ethic_pacifist
 					}
 				}
 				modifier = {
@@ -495,7 +436,7 @@ gc_vph = {
 						owner = {
 							exists = ruler
 							ruler = {
-								leader_of_faction = technologist
+								leader_of_faction = gc_vph
 							}
 						}
 					}
@@ -518,15 +459,15 @@ gc_vph = {
 				exists = owner
 				parameter:empire = {
 					NOR = {
-						has_modifier = suppressed_materialist
-						has_modifier = promoted_materialist
+						has_modifier = suppressed_pacifist
+						has_modifier = promoted_pacifist
 					}
 				}
 			}
 
 			effect = {
 				parameter:empire = {
-					add_modifier = { modifier = promoted_materialist days = -1 }
+					add_modifier = { modifier = promoted_pacifist days = -1 }
 				}
 			}
 
@@ -541,13 +482,13 @@ gc_vph = {
 			potential = {
 				exists = owner
 				parameter:empire = {
-					has_modifier = promoted_materialist
+					has_modifier = promoted_pacifist
 				}
 			}
 
 			effect = {
 				parameter:empire = {
-					remove_modifier = promoted_materialist
+					remove_modifier = promoted_pacifist
 				}
 			}
 
@@ -563,8 +504,8 @@ gc_vph = {
 				exists = owner
 				parameter:empire = {
 					NOR = {
-						has_modifier = suppressed_materialist
-						has_modifier = promoted_materialist
+						has_modifier = suppressed_pacifist
+						has_modifier = promoted_pacifist
 					}
 				}
 			}
@@ -572,7 +513,7 @@ gc_vph = {
 			effect = {
 				add_modifier = { modifier = suppressed_faction days = -1 }
 				parameter:empire = {
-					add_modifier = { modifier = suppressed_materialist days = -1 }
+					add_modifier = { modifier = suppressed_pacifist days = -1 }
 				}
 			}
 
@@ -587,14 +528,14 @@ gc_vph = {
 			potential = {
 				exists = owner
 				parameter:empire = {
-					has_modifier = suppressed_materialist
+					has_modifier = suppressed_pacifist
 				}
 			}
 
 			effect = {
 				remove_modifier = suppressed_faction
 				parameter:empire = {
-					remove_modifier = suppressed_materialist
+					remove_modifier = suppressed_pacifist
 				}
 			}
 

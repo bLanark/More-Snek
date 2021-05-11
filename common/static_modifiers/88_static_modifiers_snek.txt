@@ -4,3 +4,6 @@ imperial_ambition = {
 peacekeepers = {
 	diplo_weight_mult = 0.1
 }
+dual_monarchy = {
+	trade_value_mult = 0.1
+}

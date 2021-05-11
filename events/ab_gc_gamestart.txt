@@ -17,6 +17,10 @@ country_event = {
 				}
 			}
 			set_country_flag = grand_campaign_player_one
+			add_modifier = {
+				modifier = dual_monarchy
+				days = -1
+			}
 			log = "Found player one!"
 			random_owned_species = {
 				#save_event_target_as = humans_of_earth

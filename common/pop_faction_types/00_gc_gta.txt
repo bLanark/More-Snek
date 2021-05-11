@@ -72,6 +72,15 @@ gc_gta = {
 		
 		modifier = {
 			factor = 1.25
+			has_job = foundry
+		}
+		modifier = {
+			factor = 1.25
+			has_job = artisan
+		}
+		
+		modifier = {
+			factor = 1.25
 			exists = from
 			from = {
 				exists = leader
@@ -87,10 +96,6 @@ gc_gta = {
 			}
 		}
 
-		modifier = {
-			factor = 2.0
-			is_robot_pop = yes
-		}
 	}
 
 	leader = {
@@ -101,7 +106,7 @@ gc_gta = {
 			is_event_leader = yes
 		}
 	}
-
+	
 	demand = {
 		title = "TECHNOLOGIST_ROBOTS_ALLOWED"
 		unfulfilled_title = "TECHNOLOGIST_ROBOTS_BANNED"
@@ -142,6 +147,57 @@ gc_gta = {
 		trigger = {
 			owner = {
 				has_country_flag = faction_materialist_outraged_gc
+			}
+		}
+	}
+
+	demand = {
+		title = "GTA_ALLOYSGOODS1"
+		unfulfilled_title = "GTA_ALLOYSGOODS1_UNFULFILLED"
+		desc = "GTA_ALLOYSGOODS1_DESC"
+
+		fulfilled_effect = 25
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					resource_income_compare = { resource = alloys value >= 0 }
+					resource_income_compare = { resource = consumer_goods value >= 0 }
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				resource_income_compare = { resource = alloys value >= 10 }
+				resource_income_compare = { resource = consumer_goods value >= 10 }
+			}
+		}
+	}
+	demand = {
+		title = "GTA_ALLOYSGOODS2"
+		unfulfilled_title = "GTA_ALLOYSGOODS2_UNFULFILLED"
+		desc = "GTA_ALLOYSGOODS2_DESC"
+
+		fulfilled_effect = 0.001
+		unfulfilled_effect = -25
+
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					resource_income_compare = { resource = alloys value <= 0 }
+					resource_income_compare = { resource = consumer_goods value <= 0 }
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				resource_income_compare = { resource = alloys value >= 0 }
+				resource_income_compare = { resource = consumer_goods value >= 0 }
 			}
 		}
 	}
@@ -194,43 +250,6 @@ gc_gta = {
 							who = root.owner
 							category = technology
 							value > equivalent
-						}
-					}
-				}
-			}
-		}
-	}
-
-	demand = {
-		title = "TECHNOLOGIST_RESEARCH_TREATIES"
-		unfulfilled_title = "TECHNOLOGIST_FEW_RESEARCH_TREATIES"
-		desc = "TECHNOLOGIST_RESEARCH_TREATIES_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				num_communications > 3
-				NOT = { has_valid_civic = civic_inwards_perfection }
-			}
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					AND = {
-						has_federation = yes
-						federation = {
-							has_federation_perk = research_federation_passive
-						}
-					}
-					count_playable_country = {
-						count > 2
-						limit = {
-							exists = this
-							root.owner = { has_research_agreement = prev }
 						}
 					}
 				}
@@ -344,9 +363,9 @@ gc_gta = {
 	}
 
 	demand = {
-		title = "TECHNOLOGIST_PRECURSOR_SECRETS"
-		unfulfilled_title = "TECHNOLOGIST_NO_PRECURSOR_SECRETS"
-		desc = "TECHNOLOGIST_PRECURSOR_SECRETS_DESC"
+		title = "PROSPERITY_PEACEFUL_APPLICATIONS"
+		unfulfilled_title = "PROSPERITY_NO_PEACEFUL_APPLICATIONS_APPLICATIONS"
+		desc = "PROSPERITY_PEACEFUL_APPLICATIONS_DESC"
 
 		fulfilled_effect = 5
 		unfulfilled_effect = -0.001
@@ -354,13 +373,13 @@ gc_gta = {
 		potential = {
 			exists = owner
 			owner = {
+				host_has_dlc = "Ancient Relics Story Pack"
+				has_technology = tech_arcane_deciphering
 				OR = {
-					has_modifier = artifact_cybrex_research_completed
-					has_modifier = artifact_irassian_research_completed
-					has_modifier = artifact_league_research_completed
-					has_modifier = artifact_vultaum_research_completed_suppressed
-					has_modifier = artifact_vultaum_research_completed_public
-					has_country_flag = artifact_yuht_research_completed
+					has_modifier = artifact_find_peaceful_application_happy_bios
+					has_modifier = artifact_find_peaceful_application_consumer_goods
+					has_modifier = artifact_find_peaceful_application_amenities
+					has_modifier = artifact_find_peaceful_application_leader_improvement
 				}
 			}
 		}
@@ -368,12 +387,42 @@ gc_gta = {
 		trigger = {
 			owner = {
 				OR = {
-					has_modifier = artifact_cybrex_research_completed
-					has_modifier = artifact_irassian_research_completed
-					has_modifier = artifact_league_research_completed
-					has_modifier = artifact_vultaum_research_completed_suppressed
-					has_modifier = artifact_vultaum_research_completed_public
-					has_country_flag = artifact_yuht_research_completed
+					has_modifier = artifact_find_peaceful_application_happy_bios
+					has_modifier = artifact_find_peaceful_application_consumer_goods
+					has_modifier = artifact_find_peaceful_application_amenities
+					has_modifier = artifact_find_peaceful_application_leader_improvement
+				}
+			}
+		}
+	}
+
+	demand = {
+		title = "PROSPERITY_MILITARY_APPLICATIONS"
+		unfulfilled_title = "PROSPERITY_NO_MILITARY_APPLICATIONS"
+		desc = "PROSPERITY_MILITARY_APPLICATIONS_DESC"
+
+		unfulfilled_effect = -5
+		fulfilled_effect = +0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				host_has_dlc = "Ancient Relics Story Pack"
+				has_technology = tech_arcane_deciphering
+				OR = {
+					has_modifier = artifact_find_military_application_army
+					has_modifier = artifact_find_military_application_shield_damage
+					has_modifier = artifact_find_military_application_armor_damage
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOR = {
+					has_modifier = artifact_find_military_application_army
+					has_modifier = artifact_find_military_application_shield_damage
+					has_modifier = artifact_find_military_application_armor_damage
 				}
 			}
 		}
@@ -424,7 +473,7 @@ gc_gta = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				influence = 250
 			}
 
 			potential = {
@@ -501,7 +550,7 @@ gc_gta = {
 						owner = {
 							exists = ruler
 							ruler = {
-								leader_of_faction = technologist
+								leader_of_faction = gc_gta
 							}
 						}
 					}

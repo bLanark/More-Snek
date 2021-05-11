@@ -412,6 +412,7 @@ imperialist = {
 		}
 	}
 
+	
 	demand = {
 		title = "STRONG_DIPLO_STANCE"
 		unfulfilled_title = "STRONG_DIPLO_STANCE"

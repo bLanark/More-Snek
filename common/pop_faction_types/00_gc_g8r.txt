@@ -106,7 +106,7 @@ gc_g8r = {
 
 		modifier = {
 			factor = 2.0
-			NOT = { is_same_species = owner_species }
+			is_species_class = REP
 		}
 
 		modifier = {
@@ -557,7 +557,7 @@ gc_g8r = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				influence = 250
 			}
 
 			potential = {
@@ -634,7 +634,7 @@ gc_g8r = {
 						owner = {
 							exists = ruler
 							ruler = {
-								leader_of_faction = xenoist
+								leader_of_faction = gc_g8r
 							}
 						}
 					}

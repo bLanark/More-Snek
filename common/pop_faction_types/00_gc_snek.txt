@@ -95,7 +95,12 @@ gc_snek = {
 				has_trait = "trait_mechanical"
 			}
 		}
-
+		
+		modifier = {
+			factor = 2.0
+			is_species_class = REP
+		}
+		
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
@@ -123,7 +128,28 @@ gc_snek = {
 			}
 		}
 	}
+	
+	demand = {
+		title = "SNEK_WORMHOLE"
+		unfulfilled_title = "SNEK_WORMHOLE_UNFULFILLED"
+		desc = "SNEK_WORMHOLE_DESC"
 
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				any_system_within_border = {
+					has_natural_wormhole = yes
+				}
+			}
+		}
+	}
+	
 	demand = { # "TRADITIONALIST_NO_ROBOTS"
 		title = "TRADITIONALIST_NO_ROBOTS"
 		unfulfilled_title = "TRADITIONALIST_ROBOTS"
@@ -189,145 +215,6 @@ gc_snek = {
 		}
 	}
 
-	demand = { # "TRADITIONALIST_SPIRITUALIST_GOVERNMENT"
-		title = "TRADITIONALIST_SPIRITUALIST_GOVERNMENT"
-		unfulfilled_title = "TRADITIONALIST_SECULAR_GOVERNMENT"
-		desc = "TRADITIONALIST_SPIRITUALIST_GOVERNMENT_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -5
-
-		potential = {
-			exists = owner
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					has_ethic = ethic_fanatic_spiritualist
-					has_ethic = ethic_spiritualist
-				}
-			}
-		}
-	}
-
-	demand = { # "TRADITIONALIST_NO_TOMB_WORLDS"
-		title = "TRADITIONALIST_NO_TOMB_WORLDS"
-		unfulfilled_title = "TRADITIONALIST_TOMB_WORLDS"
-		desc = "TRADITIONALIST_NO_TOMB_WORLDS_DESC"
-
-		unfulfilled_effect = -5
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				has_surveyed_class = pc_nuked
-				NOR = {
-					has_origin = origin_post_apocalyptic
-					has_country_flag = worm_tomb_ending
-					has_valid_civic = civic_memorialist
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				NOR = {
-					any_owned_planet = {
-						is_planet_class = pc_nuked
-					}
-					any_planet_within_border = {
-						is_planet_class = pc_nuked
-						is_terraforming = yes
-					}
-				}
-			}
-		}
-	}
-
-	demand = { # "TRADITIONALIST_GAIA_WORLDS"
-		title = "TRADITIONALIST_GAIA_WORLDS"
-		unfulfilled_title = "TRADITIONALIST_NO_GAIA_WORLDS"
-		desc = "TRADITIONALIST_GAIA_WORLDS_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				has_surveyed_class = pc_gaia
-				has_ascension_perk = ap_consecrated_worlds
-			}
-		}
-
-		trigger = {
-			owner = {
-				any_planet_within_border = {
-					is_planet_class = pc_gaia
-					is_colony = no
-					OR = {
-						has_modifier = consecrated_quality_1
-						has_modifier = consecrated_quality_2
-						has_modifier = consecrated_quality_3
-						has_modifier = consecrated_quality_4
-					}
-				}
-			}
-		}
-	}
-
-	demand = { # "TRADITIONALIST_PSIONIC_PURSUIT"
-		title = "TRADITIONALIST_PSIONIC_PURSUIT"
-		unfulfilled_title = "TRADITIONALIST_NO_PSIONIC_PURSUIT"
-		desc = "TRADITIONALIST_PSIONIC_PURSUIT_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
-
-		potential = {
-			host_has_dlc = "Utopia"
-			exists = owner
-			owner = {
-				OR = {
-					num_ascension_perks > 0
-					num_ascension_perk_slots > 0
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_ascension_perk = ap_mind_over_matter
-			}
-		}
-	}
-
-	demand = { # "TRADITIONALIST_FLESH_IS_STRONG"
-		title = "TRADITIONALIST_FLESH_IS_STRONG"
-		unfulfilled_title = "TRADITIONALIST_FLESH_IS_WEAK"
-		desc = "TRADITIONALIST_FLESH_IS_STRONG_DESC"
-
-		unfulfilled_effect = -30
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				has_ascension_perk = ap_the_flesh_is_weak
-			}
-		}
-
-		trigger = {
-			owner = {
-				NOT = {
-					has_country_flag = flesh_weakened
-				}
-			}
-		}
-	}
-
 	demand = { # "TRADITIONALIST_SPIRITUALIST_POPS"
 		title = "TRADITIONALIST_SPIRITUALIST_POPS"
 		unfulfilled_title = "TRADITIONALIST_FEW_SPIRITUALIST_POPS"
@@ -385,50 +272,64 @@ gc_snek = {
 		}
 	}
 
-	demand = { # "TRADITIONALIST_SHROUD_BOON"
-		title = "TRADITIONALIST_SHROUD_BOON"
-		unfulfilled_title = "TRADITIONALIST_NO_SHROUD_BOON"
-		desc = "TRADITIONALIST_SHROUD_BOON_DESC"
+	demand = {
+		title = "G8R_REPTILIANS_PLEASE"
+		unfulfilled_title = "G8R_REPTILIANS_PLEASE_UNFULFILLED"
+		desc = "G8R_REPTILIANS_PLEASE_DESC"
 
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
+		fulfilled_effect = 25
+		unfulfilled_effect = -5
 
 		potential = {
 			exists = owner
 			owner = {
-				has_country_flag = positive_shroud_outcome
+				num_communications > 3
 			}
 		}
 
 		trigger = {
 			owner = {
-				has_country_flag = positive_shroud_outcome
+				any_owned_pop = {
+					is_species_class = REP
+				}
 			}
 		}
 	}
+	
+	demand = { 
+		title = "SNEK_OPRESSION"
+		unfulfilled_title = "SNEK_OPRESSION_UNFULFILLED"
+		desc = "SNEK_OPRESSION_DESC"
 
-	demand = { # "TRADITIONALIST_SHROUD_CURSE"
-		title = "TRADITIONALIST_SHROUD_CURSE"
-		unfulfilled_title = "TRADITIONALIST_NO_SHROUD_CURSE"
-		desc = "TRADITIONALIST_SHROUD_CURSE_DESC"
-
-		fulfilled_effect = -5
-		unfulfilled_effect = 0.001
+		unfulfilled_effect = -25
+		fulfilled_effect = 0.001
 
 		potential = {
 			exists = owner
 			owner = {
-				has_country_flag = negative_shroud_outcome
+				any_owned_pop = {
+					is_species_class = REP
+				}
 			}
 		}
 
 		trigger = {
 			owner = {
-				has_country_flag = negative_shroud_outcome
+				NOT = {
+					#has_policy_flag = slavery_allowed
+					any_owned_pop = {
+						is_species_class = REP
+						OR = {
+							has_citizenship_type = { country = prev type = citizenship_limited }
+							has_citizenship_type = { country = prev type = citizenship_slavery }
+							has_citizenship_type = { country = prev type = citizenship_purge }
+						}
+					}
+				}
 			}
 		}
 	}
-
+	
 	demand = {
 		title = "TRADITIONALIST_RELIGIOUS_FINDING"
 		unfulfilled_title = "TRADITIONALIST_NO_RELIGIOUS_FINDING"
@@ -447,6 +348,62 @@ gc_snek = {
 		trigger = {
 			owner = {
 				has_modifier = proclaim_religious_finding
+			}
+		}
+	}
+	
+	demand = {
+		title = "STRONG_DIPLO_STANCE"
+		unfulfilled_title = "STRONG_DIPLO_STANCE"
+		desc = "SNEK_STRONG_DIPLO_STANCE_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				is_homicidal = no
+				is_country_type = default
+				OR = {
+					has_policy_flag = diplo_stance_belligerent
+					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_expansionist
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				OR = {
+					has_policy_flag = diplo_stance_belligerent
+					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_expansionist
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "WEAK_DIPLO_STANCE"
+		unfulfilled_title = "WEAK_DIPLO_STANCE"
+		desc = "WEAK_DIPLO_STANCE_DESC"
+
+		fulfilled_effect = 0.01
+		unfulfilled_effect = -10
+
+		potential = {
+			exists = owner
+			owner = {
+				is_homicidal = no
+				is_country_type = default
+				has_policy_flag = diplo_stance_cooperative
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOT = { has_policy_flag = diplo_stance_cooperative }
 			}
 		}
 	}
@@ -476,7 +433,7 @@ gc_snek = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				influence = 250
 			}
 
 			potential = {
@@ -553,7 +510,7 @@ gc_snek = {
 						owner = {
 							exists = ruler
 							ruler = {
-								leader_of_faction = traditionalist
+								leader_of_faction = gc_snek
 							}
 						}
 					}

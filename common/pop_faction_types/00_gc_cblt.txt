@@ -63,6 +63,15 @@ gc_cblt = {
 		base = 150
 		
 		modifier = {
+			factor = 1.1
+			has_job = clerk
+		}
+		modifier = {
+			factor = 1.1
+			has_job = culture_worker
+		}
+		
+		modifier = {
 			factor = 1000
 			exists = from
 			has_pop_flag = pop_assigned_to_cblt
@@ -545,25 +554,45 @@ gc_cblt = {
 	}
 
 	demand = {
-		title = "COOPERATIVE_DIPLO_STANCE"
-		unfulfilled_title = "COOPERATIVE_DIPLO_STANCE"
-		desc = "COOPERATIVE_DIPLO_STANCE_DESC"
+		title = "PROSPERITY_PEACE"
+		unfulfilled_title = "PROSPERITY_NO_PEACE"
+		desc = "PROSPERITY_PEACE_DESC"
 
-		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
+		fulfilled_effect = 5
+		unfulfilled_effect = -10
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				is_at_war = no
+			}
+		}
+	}
+
+	demand = {
+		title = "PROSPERITY_NOT_AGGRESSOR"
+		unfulfilled_title = "PROSPERITY_AGGRESSOR"
+		desc = "PROSPERITY_NOT_AGGRESSOR_DESC"
+
+		unfulfilled_effect = -30
+		fulfilled_effect = 0.001
 
 		potential = {
 			exists = owner
 			owner = {
-				is_homicidal = no
-				is_country_type = default
-				has_policy_flag = diplo_stance_cooperative
+				num_communications > 2
 			}
 		}
 
 		trigger = {
 			owner = {
-				has_policy_flag = diplo_stance_cooperative
+				NOR = {
+					has_country_flag = entered_war_as_attacker
+					any_war = { is_war_participant = { who = prev side = attackers } }
+				}
 			}
 		}
 	}
@@ -593,7 +622,7 @@ gc_cblt = {
 			description = "EMBRACE_FACTION_DESC"
 
 			cost = {
-				influence = 500
+				influence = 250
 			}
 
 			potential = {
@@ -670,7 +699,7 @@ gc_cblt = {
 						owner = {
 							exists = ruler
 							ruler = {
-								leader_of_faction = xenoist
+								leader_of_faction = gc_cblt
 							}
 						}
 					}

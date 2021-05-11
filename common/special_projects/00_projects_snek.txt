@@ -1,0 +1,30 @@
+﻿special_project = {
+	key = "SNEK_MONOLITH_PROJECT"
+	cost = 500
+	days_to_research = 1000
+	tech_department = society_technology
+	picture = GFX_evt_clocks
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 1
+
+	}
+	
+	on_success = {
+		random_list = {
+			50 = {
+				ship_event = { id = anomaly.2512 }
+			}
+			50 = {
+				ship_event = { id = anomaly.2513 }
+			}
+		}
+	}
+	
+	on_fail = {
+	}
+}

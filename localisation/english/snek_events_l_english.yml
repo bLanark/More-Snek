@@ -4,23 +4,23 @@
  snek.1.a:0 "To infinity and beyond!"
 
  snek.2.name:0 "Renovatio Imperii"
- snek.2.desc:0 "[Root.Leader.GetName] beamed as [Root.Leader.GetSheHe] continued [Root.Leader.GetHerHis] speech. After years of unorganized ineffective resistance against the Snek-Purist menace, finally the Galaxy will unite against its existential threat. \n\n \"In order to ensure security and continuing stability.. :\" \n\n The words rolled off of [Root.Leader.GetName]’s tongue as [Root.Leader.GetSheHe] had practiced this speech so many times before. This was it. This was the reward for so many empty Senate sessions. \n\n \"... the Galactic Community will be reorganized into the First Galactic Imperium!\" \n\n That line always sent chills down [Root.Leader.GetName]’s spine although [Root.Leader.GetSheHe] could never figure out why. \n\n \"To save and secure our society!\" \n\n [Root.Leader.GetName] nearly collapsed from exhaustion after that final line. [Root.Leader.GetSheHe] was only propped up by [Root.Leader.GetHerHis] aide and by the thunderous applause of Senators."
+ snek.2.desc:0 "[Root.Leader.GetName] beamed as [Root.Leader.GetSheHe] continued [Root.Leader.GetHerHis] speech. After years of unorganized ineffective resistance against the Snek-Purist menace, finally the Galaxy will unite against its existential threat. \n\n\"In order to ensure security and continuing stability.. :\" \n\nThe words rolled off of [Root.Leader.GetName]’s tongue as [Root.Leader.GetSheHe] had practiced this speech so many times before. This was it. This was the reward for so many empty Senate sessions. \n\n\"... the Galactic Community will be reorganized into the First Galactic Imperium!\" \n\nThat line always sent chills down [Root.Leader.GetName]’s spine although [Root.Leader.GetSheHe] could never figure out why. \n\n\"To save and secure our society!\" \n\n[Root.Leader.GetName] nearly collapsed from exhaustion after that final line. [Root.Leader.GetSheHe] was only propped up by [Root.Leader.GetHerHis] aide and by the thunderous applause of Senators."
  snek.2.a:0 "I am the Galactic Community!"
 
  snek.3.name:0 "The Galactic Community"
  snek.3.desc:0 "With the formation of the Galactic Community, the empire stands poised to become one of the Great Powers of the Galaxy. Critics argue that peace was never an option and that this will only result in the weakening of our mighty nation. The official government position, however, is that this will bring peace in our time."
  snek.3.a:0 "What could possibly go wrong?"
 
- #snek.4.name:0
- #snek.4.desc:0 
- #snek.4.a:0
+ snek.4.name:0 "The Phantom Menace"
+ snek.4.desc:0 "[Root.Leader.GetName] sat down at [Root.Leader.GetHerHis] desk, exhausted after a long day of hard work. Incessant debate in the Senate can suck the life force out of even the most seasoned Senator. \n\nThe Speaker sighed. This job had aged [Root.Leader.GetHerHim] significantly. But despite all this, [Root.Leader.GetName] could not help but feel a sense of gratitude. [Root.Leader.GetSheHe] turned his attention to the Snekist cross mounted above the door. After all, it had only been a few decades since the Great Schism, since the Dark Times. \n\nThe Speaker could still remember the chaos and destruction of that era. How many lives were lost in that horrible war. But now [Root.Leader.GetName] felt confident that society had progressed beyond that. It was now a more civilised age. \n\nBut now was not the time to dwell on the past. For there was still much work to be done for the Speaker."
+ snek.4.a:0 "At least the worst is behind us"
 
  #snek.5.name:0
  #snek.5.desc:0 
  #snek.5.a:0
 
  snek.6.name:0 "The Petition of 1000"
- snek.6.desc:0 "A group of student protestors have gathered by the capitol building today to decry what they call ‘Censorship of History.’ The government, however, calls it /"Keeping the Public safe from insurrectionary messages./" /n/n These demonstrations, deemed ‘The Petition of 1000,’ have occurred every year on the anniversary of the Great Exodus. However this particular protest differs from all previous demonstrations.This time the students are joined by members of the Church of the Victorious Snek who ironically now march in support of their heretical and extremist brethren. Many officials are puzzled as to why they would be sympathetic to those who started the Great Schism. /n/n Meanwhile, a counter-protest movement has formed to challenge the aforementioned demonstration. Enforcers have been deployed to keep the peace but there is an uneasy feeling in the air."
+ snek.6.desc:0 "A group of student protestors have gathered by the capitol building today to decry what they call ‘Censorship of History.’ The government, however, calls it /"Keeping the Public safe from insurrectionary messages./" \n\nThese demonstrations, deemed ‘The Petition of 1000,’ have occurred every year on the anniversary of the Great Exodus. However this particular protest differs from all previous demonstrations.This time the students are joined by members of the Church of the Victorious Snek who ironically now march in support of their heretical and extremist brethren. Many officials are puzzled as to why they would be sympathetic to those who started the Great Schism. \n\nMeanwhile, a counter-protest movement has formed to challenge the aforementioned demonstration. Enforcers have been deployed to keep the peace but there is an uneasy feeling in the air."
  snek.6.a:0 "This is getting out of hand. Now there are two of them!"
 
  snek.7.name:0 "Protests Successfully Defused"
@@ -28,7 +28,7 @@
  snek.7.a:0 "Whew!"
 
  snek.8.name:0 "Protests turn Violent!"
- snek.8.desc:0 "Despite our best efforts, the protest has turned violent. Lives have been lost and most importantly government property has been damaged. While our Enforcers managed to end the riot after a few days, it is clear that many lives have been lost on all sides. \n\n Despite order being officially restored, many fear that this incident is only the prelude to another Great Schism and civil war."
+ snek.8.desc:0 "Despite our best efforts, the protest has turned violent. Lives have been lost and most importantly government property has been damaged. While our Enforcers managed to end the riot after a few days, it is clear that many lives have been lost on all sides. \n\nDespite order being officially restored, many fear that this incident is only the prelude to another Great Schism and civil war."
  snek.8.a:0 "This is not good"
 
  #snek.2.name:0
@@ -43,5 +43,20 @@
  #snek.2.desc:0 
  #snek.2.a:0
 
+ snek.22.name:0 "March of the Eagles"
+ snek.22.desc:0 "Volunteers from around the empire are signing up to protect the nation! These so-called \"Eagles\" have boosted our enlistment sheets significantly."
+ snek.22.a:0 "The Eagles march again."
+
+ snek.25.name:0 "Our Benefactors"
+ snek.25.desc:0 "It turns out those tin-foil wearing conspiracy theorists of yore were correct; there really were space reptilians who secretly controlled humanity. \n\nIn addition, these aliens have revealed that they are the original worshippers of Lord Snek and invite us to worship alongside them. While this revelation is a shock to many, only some have denounced our overlords. \n\nThese few decry what they call \"slavery\" and demand that we declare independence from these reptilians. However, most people are complacent with this arrangement. After all, why shouldn’t we trust those who are closest to Lord Snek?"
+ snek.25.a:0 "A toast to our new Snekist friends!"
+
+ snek.26.name:0 "To Serve Man"
+ snek.26.desc:0 "Our overlords have once again asked us to send a portion of our population to their homeworld for ascension to Snekhood. Of course, we have many eager volunteers who wish to become closer to Lord Snek and they have been accordingly shipped off to the Vestige of Ecdysis. While there are conspiracy theorists who fear that our Benefactors’ intentions are malevolent, they are confined to a small corner of the Holonet."
+ snek.26.a:0 "Looks like meat’s back on the menu!"
+
+ snek.27.name:0 "A Brave New World"
+ snek.27.desc:0 "We have done it. We have thrown off the shackles of our corrupt and decadent overlords and are now free to chart our own course through the Galaxy. \n\nNo longer will a reptilian shadow government secretly control our governments. The last Vestige of Ecdysis has been snuffed out and a new era dawns on humanity."
+ snek.27.a:0 "Maybe the real Snek was the friends we made along the way?"
 
 

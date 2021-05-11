@@ -43,7 +43,7 @@ country_event = {
 	}
 
 	trigger = {
-		years_passed < 57
+		is_galactic_emperor = yes
 		is_ai = no
 	}
 
@@ -72,7 +72,7 @@ country_event = {
 	}
 
 	trigger = {
-		years_passed < 57
+		is_galactic_community_member = yes
 		is_ai = no
 	}
 
@@ -83,6 +83,29 @@ country_event = {
 			modifier = peacekeepers 
 			days = -1
 		}
+	}
+}
+country_event = {
+	id = snek.4
+	title = "snek.4.name"
+	desc = "snek.4.desc"
+	picture = GFX_evt_in_the_dark
+	location = root
+	show_sound = notification_uplift
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	trigger = {
+		is_ai = no
+	}
+
+	option = {
+		name = snek.4.a
 	}
 }
 
@@ -182,5 +205,88 @@ planet_event = {
 	option = {
 		name = snek.8.a
 		FROM = { kill_pop = yes }
+	}
+}
+
+country_event = {
+	id = snek.22
+	title = "snek.22.name"
+	desc = "snek.22.desc"
+	picture = GFX_evt_salute #Mot working
+	location = root
+	show_sound = notification_uplift
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		months = 300
+	}
+
+	trigger = {
+		is_ai = no
+		is_at_war = yes
+		NOT = {
+  			has_modifier = march_of_the_eagles
+		}
+	}
+
+	option = {
+		name = snek.22.a
+		add_modifier = {
+			modifier = eagles_march
+			months = 36
+		}
+	}
+}
+
+country_event = {
+	id = snek.25
+	title = "snek.25.name"
+	desc = "snek.25.desc"
+	picture = GFX_evt_alien_segregation
+	location = root
+	show_sound = notification_uplift
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	trigger = {
+		is_ai = no
+	}
+	option = {
+		name = snek.25.a
+		}
+}
+country_event = {
+	id = snek.27
+	title = "snek.27.name"
+	desc = "snek.27.desc"
+	picture = GFX_evt_news_room
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_subject = no
+		is_ai = no
+	}
+
+	option = {
+		name = snek.27.a
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier2unityreward
+		}	
+		add_monthly_resource_mult = {
+			resource = influence
+			value = @tier2unityreward
+		}
 	}
 }

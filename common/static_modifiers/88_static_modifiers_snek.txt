@@ -7,3 +7,7 @@ peacekeepers = {
 dual_monarchy = {
 	trade_value_mult = 0.1
 }
+eagles_march = {
+	armies_upkeep_mult = -0.15
+	ships_upkeep_mult = -0.15
+}

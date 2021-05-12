@@ -1,0 +1,15 @@
+
+portraits = {
+	
+	snek = {	
+		entity = "portrait_snek_entity"
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		greeting_sound = "arthropoid_01_greetings" 
+			
+		character_textures = {
+			"gfx/models/portraits/arthropoid/snek_1.dds"
+		}
+	}
+	
+}

@@ -1,0 +1,12 @@
+
+entity = {
+	name = "portrait_snek_entity"
+	pdxmesh = "portrait_arthropoid_05_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"	 chance = 4.0 looping = no next_state = idle }
+	state = { name = "idle"       animation = "idle2"    chance = 1.0 looping = no next_state = idle }
+	state = { name = "idle"       animation = "idle3"    chance = 1.0 looping = no next_state = idle }
+	state = { name = "idle"       animation = "idle4"    chance = 1.0 looping = no next_state = idle }
+	scale = 1.2
+}

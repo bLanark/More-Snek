@@ -1,5 +1,6 @@
 namespace = snek
 
+#A Most Serpentine & Serene Anniversary
 country_event = {
 	id = snek.1
 	title = "snek.1.name"
@@ -28,6 +29,8 @@ country_event = {
 		add_resource = { influence = 50}
 	}
 }
+
+#Renovatio Imperii
 country_event = {
 	id = snek.2
 	title = "snek.2.name"
@@ -58,6 +61,8 @@ country_event = {
 		}
 	}
 }
+
+#The Galactic Community 
 country_event = {
 	id = snek.3
 	title = "snek.3.name"
@@ -88,6 +93,8 @@ country_event = {
 		}
 	}
 }
+
+#The Phantom Menace - Crusaders event 1
 country_event = {
 	id = snek.4
 	title = "snek.4.name"
@@ -101,6 +108,7 @@ country_event = {
 
 	trigger = {
 		has_country_flag = grand_campaign_player_one
+		ai = no				
 	}
 
 	mean_time_to_happen = {
@@ -111,6 +119,100 @@ country_event = {
 		name = snek.4.a
 	}
 }
+
+#Petition of 1000 - Crusaders event 3.1
+planet_event = {
+	id = snek.6
+	title = "snek.6.name"
+	desc = "snek.6.desc"
+	
+	fire_only_once = yes
+	
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		has_ground_combat = no
+	}
+
+	trigger = {
+		has_country_flag = grand_campaign_player_one
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	#insert immediate for either pops changing or infulence. 
+
+	option = {
+		name = snek.6.a
+		pop_event = { id = snek.10 }
+		random_list = {
+			50 = {
+				hidden_effect = {
+					country_event = { id = snek.7}
+				}
+
+			}
+			50 = {
+				planet = {
+					hidden_effect = {					
+						planet_event = { id = snek.8}
+					}	
+				}
+			}
+		}
+	}
+}
+
+#Protests turn Violent! - Sub event of snek.6 - Crusaders event 3.2
+country_event = {
+	id = snek.7
+	title = "snek.7.name"
+	desc = "snek.7.desc"
+	picture = GFX_evt_news_room
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = snek.7.a
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier2unityreward
+		}	
+		add_monthly_resource_mult = {
+			resource = influence
+			value = @tier2unityreward
+		}
+	}
+}
+
+#Protests turn Violent! - Sub event of snek.6 - Crusaders event 3.3
+planet_event = {
+	id = snek.8
+	title = "snek.8.name"
+	desc = "snek.8.desc"
+	picture = GFX_evt_open_revolt
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	pre_triggers = {
+		has_owner = yes
+		is_homeworld = yes
+		original_owner = yes
+		has_ground_combat = no
+	}
+
+	option = {
+		name = snek.8.a
+		FROM = { kill_pop = yes }
+	}
+}
+
+
 
 country_event = {
 	id = snek.22
@@ -200,9 +302,9 @@ country_event = {
 }
 #rename to snek.28 later
 planet_event = {
-	id = snek.69
-	title = "snek.69.name"
-	desc = "snek.69.desc"
+	id = snek.28
+	title = "snek.28.name"
+	desc = "snek.28.desc"
 	picture = GFX_evt_civil_action
 
 	fire_only_once = no
@@ -213,11 +315,11 @@ planet_event = {
 
 	pre_triggers = {
 		has_owner = yes
-		has_country_flag = grand_campaign_player_one
 		has_ground_combat = no 
 	}	
 
 	trigger = {
+		has_country_flag = grand_campaign_player_one
 		planet_stability < 50
 		NOT = {
 			has_modifier = ang_masses
@@ -226,7 +328,7 @@ planet_event = {
 	}
 
 	option = {
-		name = snek.69.a
+		name = snek.28.a
 		add_modifier = {
 			modifier = ang_masses
 			months = 24
@@ -234,7 +336,7 @@ planet_event = {
 	}
 
 	option = {
-		name = snek.69.b
+		name = snek.28.b
 		add_modifier = {
 			modifier = pas_masses
 			months = 24

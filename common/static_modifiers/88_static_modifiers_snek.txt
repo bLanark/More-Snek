@@ -22,3 +22,6 @@ ang_masses = {
 not_calm = {
 	pop_happiness = -0.05
 }
+unveiled = {
+	pop_happiness = -0.05
+}

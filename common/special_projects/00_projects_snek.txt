@@ -10,17 +10,14 @@
 	requirements = {
 		shipclass_science_ship = 1
 		leader = scientist
-		skill = 1
+		skill = 2
 
 	}
 	
 	on_success = {
 		random_list = {
 			50 = {
-				ship_event = { id = anomaly.2512 }
-			}
-			50 = {
-				ship_event = { id = anomaly.2513 }
+				country_event = { id = snek.12 }
 			}
 		}
 	}

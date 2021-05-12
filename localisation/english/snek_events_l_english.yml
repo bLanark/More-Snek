@@ -32,9 +32,10 @@
  snek.8.desc:0 "Despite our best efforts, the protest has turned violent. Lives have been lost and most importantly government property has been damaged. While our Enforcers managed to end the riot after a few days, it is clear that many lives have been lost on all sides. \n\nDespite order being officially restored, many fear that this incident is only the prelude to another Great Schism and civil war."
  snek.8.a:0 "This is not good"
 
- #snek.2.name:0
- #snek.2.desc:0 
- #snek.2.a:0
+
+ snek.12.name:0 "Tick-Tock"
+ snek.12.desc:0 "After months of studying the Monolith without success, it did something... unexpected, It turned on. Specifically, it displayed a holographic video complete with disturbing imagery and words. \n\nPictures of the Prophet and Lord Snek flashed violently across the projected screen. Then the audio recording began. \n\n\“Remain Calm. The Blessed Regency continues. The Galaxy shall be purified. The Prophet shall return. The Crusaders of Cygnus shall endure. There is much to be done.\”\n\nWhatever questions about the Monolith’s origins melted away in that instance. The scientists present were absolutely stunned. As the audio message repeated itself over and over again, some scientists laughed, some cried, most were silent. \n\nBut one feeling was felt by all.\n\nFear."
+ snek.12.a:0 "What? How could this happen? They're supposed to be dead!"
 
  #snek.2.name:0
  #snek.2.desc:0 
@@ -68,3 +69,5 @@
  snek.70.name:0 "Hail the Nightmare"
  snek.70.desc:0 "The Crusaders of Cygnus have defeated another alien empire in its quest to “purify” the galaxy. Despite our best efforts, news of this has spread to the general population causing mass panic. Alien refugees are already starting their mass exodus."
  snek.70.a:0 "Remain Calm!"
+
+ 

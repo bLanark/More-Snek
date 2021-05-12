@@ -1,0 +1,56 @@
+#Probably broken ish
+country_event = {
+	id = snek.32
+	title = "snek.32.name"
+	desc = "snek.32.desc"
+	picture = GFX_evt_alien_propaganda
+
+	fire_only_once = no
+
+	mean_time_to_happen = {
+		months = 840
+	}
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+		has_ground_combat = no 
+	}	
+
+	trigger = {
+		has_modifier = dual_monarchy
+		OR = {
+			authority = auth_dictatorial
+			authority = auth_imperial
+		}	
+	}
+
+	option = {
+		name = snek.32.a
+		hidden_effect = {		
+			change_government = {
+				if = {
+						limit = {
+							OR = {
+								ethic = ethic_authoritarian
+								ethic = ethic_fanatic_authoritarian
+							}
+						}
+						country_remove_ethic = ethic_authoritarian
+						country_remove_ethic = ethic_fanatic_authoritarian
+						country_add_ethic = ethic_egalitarian
+					}		
+				force_remove_civic =  	
+				authority = auth_democratic
+			}
+		}
+	}
+	option = {
+		name = snek.32.b
+		hidden_effect = {		
+			kill_leader = { type = ruler } 
+		}
+	}
+}
+
+

@@ -18,6 +18,7 @@ country_event = {
 	trigger = {
 		years_passed < 57
 		has_country_flag = grand_campaign_player_one
+		ai = no
 	}
 
 
@@ -45,6 +46,7 @@ country_event = {
 	trigger = {
 		is_galactic_emperor = yes
 		has_country_flag = grand_campaign_player_one
+		ai = no		
 	}
 
 
@@ -74,6 +76,7 @@ country_event = {
 	trigger = {
 		is_galactic_community_member = yes
 		has_country_flag = grand_campaign_player_one
+		ai = no		
 	}
 
 
@@ -104,124 +107,8 @@ country_event = {
 		months = 60
 	}
 
-	trigger = {
-		has_country_flag = grand_campaign_player_one
-	}
-
 	option = {
 		name = snek.4.a
-	}
-}
-
-planet_event = {
-	id = snek.6
-	title = "snek.6.name"
-	desc = "snek.6.desc"
-	
-	fire_only_once = yes
-	
-	pre_triggers = {
-		has_owner = yes
-		is_homeworld = no
-		original_owner = yes
-		has_country_flag = grand_campaign_player_one
-		has_ground_combat = no
-	}
-
-	trigger = {
-		has_country_flag = grand_campaign_player_one
-	}
-	
-	mean_time_to_happen = {
-		months = 300
-	}
-	
-	option = {
-		name = snek.6.a
-		pop_event = { id = snek.10 }
-		random_list = {
-			50 = {
-				country_event = { id = snek.7 days = 1 random = 20 }
-			}
-			50 = {
-				planet = {
-					planet_event = { id = snek.8 days = 1 random = 20 }
-				}
-			}
-		}
-
-	}
-}
-
-pop_event = {
-	id = snek.10
-	hide_window = yes
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	trigger = {
-		has_country_flag = grand_campaign_player_one
-	}
-
-	immediate = {
-		name = snek.7.a
-		create_pop = {
-			species = event_target:random_species
-			ethos = {
-				ethic = "ethic_fanatic_spiritualist"
-			}
-		}
-		create_pop = {
-			species = event_target:random_species
-			ethos = {
-				ethic = "ethic_fanatic_materialist"
-			}
-		}	
-	}	
-}
-
-country_event = {
-	id = snek.7
-	title = "snek.7.name"
-	desc = "snek.7.desc"
-	picture = GFX_evt_news_room
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	trigger = {
-		has_country_flag = grand_campaign_player_one
-	}
-
-	option = {
-		name = snek.7.a
-		add_monthly_resource_mult = {
-			resource = unity
-			value = @tier2unityreward
-		}	
-		add_monthly_resource_mult = {
-			resource = influence
-			value = @tier2unityreward
-		}
-	}
-}
-planet_event = {
-	id = snek.8
-	title = "snek.8.name"
-	desc = "snek.8.desc"
-	picture = GFX_evt_open_revolt
-
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	trigger = {
-		has_country_flag = grand_campaign_player_one
-	}
-
-	option = {
-		name = snek.8.a
-		FROM = { kill_pop = yes }
 	}
 }
 
@@ -229,7 +116,7 @@ country_event = {
 	id = snek.22
 	title = "snek.22.name"
 	desc = "snek.22.desc"
-	picture = GFX_evt_salute #Mot working
+	picture = GFX_evt_salute
 	location = root
 	show_sound = notification_uplift
 
@@ -245,6 +132,7 @@ country_event = {
 		NOT = {
   			has_modifier = march_of_the_eagles
 		}
+		ai = no		
 	}
 
 	option = {
@@ -273,6 +161,8 @@ country_event = {
 
 	trigger = {
 		has_country_flag = grand_campaign_player_one
+		ai = no	
+		has_country_flag = ecdysis_discovered
 	}
 	option = {
 		name = snek.25.a
@@ -308,7 +198,7 @@ country_event = {
 		}
 	}
 }
-
+#rename to snek.28 later
 planet_event = {
 	id = snek.69
 	title = "snek.69.name"

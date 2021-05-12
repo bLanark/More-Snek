@@ -11,3 +11,11 @@ eagles_march = {
 	armies_upkeep_mult = -0.15
 	ships_upkeep_mult = -0.15
 }
+pas_masses = {
+	planet_stability_mult = 0.05
+	pop_happiness_mult = 0.05
+}
+ang_masses = {
+	planet_stability_mult = -0.05
+	pop_happiness_mult = -0.05
+}

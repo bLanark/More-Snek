@@ -59,5 +59,10 @@
  snek.27.name:0 "A Brave New World"
  snek.27.desc:0 "We have done it. We have thrown off the shackles of our corrupt and decadent overlords and are now free to chart our own course through the Galaxy. \n\nNo longer will a reptilian shadow government secretly control our governments. The last Vestige of Ecdysis has been snuffed out and a new era dawns on humanity."
  snek.27.a:0 "Maybe the real Snek was the friends we made along the way?"
+ 
+ snek.69.name:0 "Discord in the Streets"
+ snek.69.desc:0 "Led by a coalition of merchants and otherwise free-spirited citizens known for their fierce opposition to authoritarian rule, a revolt has sprung up in [Root.GetName]! If they are not stopped, they will enforce randomly generated vengeance upon all within the governor’s palace."
+ snek.69.a:0 "We must respond with moderation!"
+ snek.69.b:0 "Okay, fine, no more ‘emergency power’ requests… for now"
 
 

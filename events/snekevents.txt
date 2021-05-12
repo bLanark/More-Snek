@@ -290,3 +290,54 @@ country_event = {
 		}
 	}
 }
+
+planet_event = {
+	id = snek.69
+	title = "snek.69.name"
+	desc = "snek.69.desc"
+	picture = GFX_evt_civil_action
+
+	fire_only_once = no
+
+	mean_time_to_happen = {
+		days = 720
+	}
+
+	pre_triggers = {
+		has_owner = yes
+		is_ai = no
+		has_ground_combat = no 
+	}	
+
+	trigger = {
+		planet_stability < 50
+		NOT = {
+			has_modifier = ang_masses
+			has_modifier = pas_masses
+		}
+	}
+
+	option = {
+		name = snek.69.a
+		add_modifier = {
+			modifier = ang_masses
+			months = 24
+		}
+	}
+
+	option = {
+		name = snek.69.b
+		add_modifier = {
+			modifier = pas_masses
+			months = 24
+		}
+		add_monthly_resource_mult = {
+			resource = energy
+			value = -100
+		}	
+		add_monthly_resource_mult = {
+			resource = consumer_goods
+			value = -100
+		}
+	}
+}

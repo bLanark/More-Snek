@@ -17,7 +17,7 @@ country_event = {
 
 	trigger = {
 		years_passed < 57
-		is_ai = no
+		has_country_flag = grand_campaign_player_one
 	}
 
 
@@ -44,7 +44,7 @@ country_event = {
 
 	trigger = {
 		is_galactic_emperor = yes
-		is_ai = no
+		has_country_flag = grand_campaign_player_one
 	}
 
 
@@ -73,7 +73,7 @@ country_event = {
 
 	trigger = {
 		is_galactic_community_member = yes
-		is_ai = no
+		has_country_flag = grand_campaign_player_one
 	}
 
 
@@ -96,12 +96,16 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	trigger = {
+		has_country_flag = grand_campaign_player_one
+	}
+
 	mean_time_to_happen = {
 		months = 60
 	}
 
 	trigger = {
-		is_ai = no
+		has_country_flag = grand_campaign_player_one
 	}
 
 	option = {
@@ -120,11 +124,12 @@ planet_event = {
 		has_owner = yes
 		is_homeworld = no
 		original_owner = yes
-		is_ai = no
+		has_country_flag = grand_campaign_player_one
 		has_ground_combat = no
 	}
 
 	trigger = {
+		has_country_flag = grand_campaign_player_one
 	}
 	
 	mean_time_to_happen = {
@@ -155,6 +160,10 @@ pop_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	trigger = {
+		has_country_flag = grand_campaign_player_one
+	}
+
 	immediate = {
 		name = snek.7.a
 		create_pop = {
@@ -181,6 +190,10 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	trigger = {
+		has_country_flag = grand_campaign_player_one
+	}
+
 	option = {
 		name = snek.7.a
 		add_monthly_resource_mult = {
@@ -202,6 +215,10 @@ planet_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	
+	trigger = {
+		has_country_flag = grand_campaign_player_one
+	}
+
 	option = {
 		name = snek.8.a
 		FROM = { kill_pop = yes }
@@ -223,7 +240,7 @@ country_event = {
 	}
 
 	trigger = {
-		is_ai = no
+		has_country_flag = grand_campaign_player_one
 		is_at_war = yes
 		NOT = {
   			has_modifier = march_of_the_eagles
@@ -255,12 +272,13 @@ country_event = {
 	}
 
 	trigger = {
-		is_ai = no
+		has_country_flag = grand_campaign_player_one
 	}
 	option = {
 		name = snek.25.a
 		}
 }
+
 country_event = {
 	id = snek.27
 	title = "snek.27.name"
@@ -275,7 +293,7 @@ country_event = {
 
 	trigger = {
 		is_subject = no
-		is_ai = no
+		has_country_flag = grand_campaign_player_one
 	}
 
 	option = {
@@ -305,7 +323,7 @@ planet_event = {
 
 	pre_triggers = {
 		has_owner = yes
-		is_ai = no
+		has_country_flag = grand_campaign_player_one
 		has_ground_combat = no 
 	}	
 
@@ -341,3 +359,30 @@ planet_event = {
 		}
 	}
 }
+# Event under construction (CoC destroys an empire)
+#country_event = {
+#	id = snek.70
+#	title = "snek.70.name"
+#	desc = "snek.70.desc"
+#	picture = GFX_evt_clocks
+#
+#	fire_only_once = no
+#
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#
+#	trigger = {
+#		has_country_flag = grand_campaign_player_one
+#
+#	}
+#
+#	option = {
+#		name = snek.27.a
+#			add_modifier = {
+#				modifier = not_calm
+#				months = 24
+#			}	
+#		}
+#	}
+#}

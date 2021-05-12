@@ -349,14 +349,8 @@ planet_event = {
 			modifier = pas_masses
 			months = 24
 		}
-		add_monthly_resource_mult = {
-			resource = energy
-			value = -100
-		}	
-		add_monthly_resource_mult = {
-			resource = consumer_goods
-			value = -100
-		}
+		owner = { add_resource = { energy = -100 } }
+		owner = { add_resource = { consumer_goods = -100 } }
 	}
 }
 # Event under construction (CoC destroys an empire)

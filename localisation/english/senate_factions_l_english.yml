@@ -12,13 +12,13 @@
  gc_senate_factions.3.b: "Use Senate factions §Rwithout§! §Yweighted ideologies§!"
  gc_senate_factions.3.c: "Use vanilla faction mechanics"
  
- TBD_BUREUCRATS_EVERYWHERE: "Bureucrats on Every Planet"
- TBD_BUREUCRATS_EVERYWHERE_UNFULFILLED: "No Bureucrats on Every Planet"
- TBD_BUREUCRATS_EVERYWHERE_DESC: "No government can function without bureucracy. Ensuring that every planet has at least one §YBureucracy Building§! will keep the [Root.GetName] content."
+ TBD_BUREAUCRATS_EVERYWHERE: "Bureaucrats on Every Planet"
+ TBD_BUREAUCRATS_EVERYWHERE_UNFULFILLED: "No Bureaucrats on Every Planet"
+ TBD_BUREAUCRATS_EVERYWHERE_DESC: "No government can function without bureaucracy. Ensuring that every planet has at least one §YBureaucracy Building§! will keep the [Root.GetName] content."
  
- TBD_BUREUCRACY_PLANET: "A Planet Dedicated to Bureucracy"
- TBD_BUREUCRACY_PLANET_UNFULFILLED: "No Planet Dedicated to Bureucracy""
- TBD_BUREUCRACY_PLANET_DESC: "As our stellar bureucratic apparatus expands, it's clear that at least one of our colonies should be dedicated fully as a §YBureucratic Center§!."
+ TBD_BUREAUCRACY_PLANET: "A Planet Dedicated to Bureaucracy"
+ TBD_BUREAUCRACY_PLANET_UNFULFILLED: "No Planet Dedicated to Bureaucracy""
+ TBD_BUREAUCRACY_PLANET_DESC: "As our stellar bureaucratic apparatus expands, it's clear that at least one of our colonies should be dedicated fully as a §YBureaucratic Center§!."
  
  SNEK_WORMHOLE: "A Wormhole Within Our Borders"
  SNEK_WORMHOLE_UNFULFILLED: "No Wormhole Inside Our Borders"
@@ -29,12 +29,12 @@
  SNEK_OPRESSION_DESC: "All reptilian species must enjoy full citizenship rights. Having any §YReptilian§! species with the citizenship types §YResidence§!, §YSlavery§! or §YPurge§! will anger [Root.GetName]."
  SNEK_STRONG_DIPLO_STANCE_DESC:0 "Having a §Y$diplo_stance_belligerent$§!, §Y$diplo_stance_expansionist$§! or §Y$diplo_stance_supremacist$§! Diplomatic Stance pleases the [Root.GetName]."
  
- GTA_ALLOYSGOODS1: "Shortage on Industry Production"
- GTA_ALLOYSGOODS1_UNFULFILLED: "Shortage on Industry Production"
- GTA_ALLOYSGOODS1_DESC: "Our industrial net production must always positive. We should make sure that we are producing a surplus of §YAlloys§! and §YConsumer Goods§!."
- GTA_ALLOYSGOODS2: "Healthy Industry Production"
- GTA_ALLOYSGOODS2_UNFULFILLED: "Compromised Industry Production"
- GTA_ALLOYSGOODS2_DESC: "To maintain a healthy economy we must maintain a healthy industry. By making sure we are always producing a surplus amount of §Y100 Alloys§! and §Y100 Consumer Goods§! will please [Root.GetName]."
+ GTA_ALLOYSGOODS2: "Shortage on Industry Production"
+ GTA_ALLOYSGOODS2_UNFULFILLED: "Shortage on Industry Production"
+ GTA_ALLOYSGOODS2_DESC: "Our industrial net production must always positive. We should make sure that we are producing a surplus of §YAlloys§! and §YConsumer Goods§!."
+ GTA_ALLOYSGOODS1: "Healthy Industry Production"
+ GTA_ALLOYSGOODS1_UNFULFILLED: "Compromised Industry Production"
+ GTA_ALLOYSGOODS1_DESC: "To maintain a healthy economy we must maintain a healthy industry. By making sure we are always producing a surplus amount of §Y100 Alloys§! and §Y100 Consumer Goods§! will please [Root.GetName]."
 
  G8R_REPTILIANS_PLEASE: "Reptilians in our midst!"
  G8R_REPTILIANS_PLEASE_UNFULFILLED: "No Reptilian Species"
@@ -58,7 +58,7 @@
  
  ADM_LANDLUBBERS: "No Landlubber Foolery!"
  ADM_LANDLUBBERS_UNFULFILLED: "Landlubber foolery!"
- ADM_LANDLUBBERS_DESC: "War has changed. It would be cruel mockery of our armed forces to entertain the foolish, bygone pastime of fighting on steady surfaces. The time of §YWarrior Culture§ is over."
+ ADM_LANDLUBBERS_DESC: "War has changed. It would be cruel mockery of our armed forces to entertain the foolish, bygone pastime of fighting on steady surfaces. The time of §YWarrior Culture§! is over."
  
  ADM_GOODOLDBOYS: "Good Old Boys!"
  ADM_GOODOLDBOYS_UNFULFILLED: "Abandoned Our Old Boys!"

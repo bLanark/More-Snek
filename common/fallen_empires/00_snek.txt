@@ -35,7 +35,22 @@ fallen_empire_2 = {
 				ethic = ethic_fanatic_spiritualist
 				ethic = ethic_xenophobe
 			}			
-			flag = random
+			flag={
+				icon={
+					category="special"
+					file="VoEEmblem_ab.dds"
+				}
+				background={
+					category="backgrounds"
+					file="voe_hexagon.dds"
+				}
+				colors={
+					"red"
+					"dark_teal"
+					"null"
+					"null"
+				}
+			}
 			origin = "origin_fallen_empire"
 			effect = {
 				set_country_flag = fallen_empire_2

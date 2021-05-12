@@ -259,7 +259,7 @@ gc_g8r = {
 	demand = {
 		title = "G8R_SAVANNAH_PLEASE"
 		unfulfilled_title = "G8R_SAVANNAH_PLEASE_UNFULFILLED"
-		desc = "G8R_SAVANNA_PLEASE_DESC"
+		desc = "G8R_SAVANNAH_PLEASE_DESC"
 
 		fulfilled_effect = 5
 		unfulfilled_effect = -5

@@ -72,7 +72,7 @@ gc_tbd = {
 		}
 		modifier = {
 			factor = 1.25
-			has_job = bureucrat
+			has_job = bureaucrat
 		}
 		modifier = {
 			factor = 1.25
@@ -252,9 +252,9 @@ gc_tbd = {
 	}
 	
 	demand = {
-		title = "TBD_BUREUCRATS_EVERYWHERE"
-		unfulfilled_title = "TBD_BUREUCRATS_EVERYWHERE_UNFULFILLED"
-		desc = "TBD_BUREUCRATS_EVERYWHERE_DESC"
+		title = "TBD_BUREAUCRATS_EVERYWHERE"
+		unfulfilled_title = "TBD_BUREAUCRATS_EVERYWHERE_UNFULFILLED"
+		desc = "TBD_BUREAUCRATS_EVERYWHERE_DESC"
 		
 		fulfilled_effect = 0.001
 		unfulfilled_effect = -10
@@ -280,9 +280,9 @@ gc_tbd = {
 		}
 	}
 	demand = {
-		title = "TBD_BUREUCRACY_PLANET"
-		unfulfilled_title = "TBD_BUREUCRACY_PLANET_UNFULFILLED"
-		desc = "TBD_BUREUCRACY_PLANET_DESC"
+		title = "TBD_BUREAUCRACY_PLANET"
+		unfulfilled_title = "TBD_BUREAUCRACY_PLANET_UNFULFILLED"
+		desc = "TBD_BUREAUCRACY_PLANET_DESC"
 		
 		fulfilled_effect = 10
 		unfulfilled_effect = -0.001

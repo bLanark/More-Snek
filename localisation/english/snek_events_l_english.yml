@@ -32,18 +32,26 @@
  snek.8.desc:0 "Despite our best efforts, the protest has turned violent. Lives have been lost and most importantly government property has been damaged. While our Enforcers managed to end the riot after a few days, it is clear that many lives have been lost on all sides. \n\nDespite order being officially restored, many fear that this incident is only the prelude to another Great Schism and civil war."
  snek.8.a:0 "This is not good"
 
-
  snek.12.name:0 "Tick-Tock"
  snek.12.desc:0 "After months of studying the Monolith without success, it did something... unexpected, It turned on. Specifically, it displayed a holographic video complete with disturbing imagery and words. \n\nPictures of the Prophet and Lord Snek flashed violently across the projected screen. Then the audio recording began. \n\n\“Remain Calm. The Blessed Regency continues. The Galaxy shall be purified. The Prophet shall return. The Crusaders of Cygnus shall endure. There is much to be done.\”\n\nWhatever questions about the Monolith’s origins melted away in that instance. The scientists present were absolutely stunned. As the audio message repeated itself over and over again, some scientists laughed, some cried, most were silent. \n\nBut one feeling was felt by all.\n\nFear."
  snek.12.a:0 "What? How could this happen? They're supposed to be dead!"
 
- #snek.2.name:0
- #snek.2.desc:0 
- #snek.2.a:0
+ snek.13.name:0 "Snek-Purist Subversion"
+ snek.13.desc:0 "Despite our best efforts, news of the Monolith and its message have spread across the empire. Mass panic and confusion has gripped the streets of our colonies as many formerly underground Snek-Purists reveal themselves. \n\nSome religious leaders are claiming that this is a sign from Lord Snek that the Prophet will return soon, just as the so-called \"Worshippers of the Prophet\" predicted. "
+ snek.13.a:0 "Where will you be when the Prophet reveals herself?"
 
- #snek.2.name:0
- #snek.2.desc:0 
- #snek.2.a:0
+ snek.16.name:0 "A Gift"
+ snek.16.desc:0 "As [Root.Leader.GetName] was finally able to sit down after a long day of work, [Root.Leader.GetSheHe] heard a knock at the door. \"Come in.\" \n\n\"Your Excellency, a gift has arrived.\" said the familiar voice of [Root.Leader.GetName]’s aide. \n\n\"Bring it in.\" \n\nA robed man carrying a small package walked into the [Root.GetRulerTitle]’s office, stopping short of the [Root.GetRulerTitle]’s desk. \n\n\"Well what do you have for me?\" \n\n The man placed the small package on the [Root.Leader.GetName]’s desk not saying a word, he bowed and scurried from the room. [Root.Leader.GetName] carefully examined the box, being careful not to touch it. [Root.Leader.GetSheHe] noticed a small symbol imprinted on the lid. A symbol that looked suspiciously like the emblem of the Snek-Purists."
+ snek.16.a:0 "Thank you for this gift!"
+ snek.16.b:0 "Put it with the others"
+
+ snek.17.name:0 "The Gift"
+ snek.17.desc:0 "[Root.Leader.GetName] eagerly opens the box.\n\nThe package explodes."
+ snek.17.a:0 "It’s treason then"
+
+ snek.18.name:0 "The Gift"
+ snek.18.desc:0 "The box is placed in the storage room with hundreds of similar boxes. A few minutes later a rumbling could be heard from the room."
+ snek.18.a:0 "Could have been worse"
 
  snek.22.name:0 "March of the Eagles"
  snek.22.desc:0 "Volunteers from around the empire are signing up to protect the nation! These so-called \"Eagles\" have boosted our enlistment sheets significantly."

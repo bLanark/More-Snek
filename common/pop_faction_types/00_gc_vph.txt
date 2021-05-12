@@ -8,7 +8,14 @@ gc_vph = {
 
 	unique = yes
 	support_multiplier = 1
-
+	
+	resources = {
+		category = pop_factions
+		produces = {
+			influence = 2
+		}
+	}
+	
 	is_potential = {
 		# THIS IS ADDED BY THE MOD
 		has_country_flag = grand_campaign_senate

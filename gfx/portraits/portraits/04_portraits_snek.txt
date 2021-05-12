@@ -9,6 +9,10 @@ portraits = {
 			
 		character_textures = {
 			"gfx/models/portraits/arthropoid/snek_1.dds"
+			"gfx/models/portraits/arthropoid/snek_2.dds"
+			"gfx/models/portraits/arthropoid/snek_3.dds"
+			"gfx/models/portraits/arthropoid/snek_4.dds"
+			"gfx/models/portraits/arthropoid/snek_5.dds"
 		}
 	}
 	

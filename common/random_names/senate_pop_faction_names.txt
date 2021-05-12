@@ -17,7 +17,7 @@ pop_faction_name_parts_list = {
 pop_faction_name_parts_list = {
 	key = "tbd_name_1"
 	parts = {
-		"The Bureucratic Department" = 1
+		"The Bureaucratic Department" = 1
 	}
 }
 
@@ -66,7 +66,7 @@ pop_faction_name_parts_list = {
 pop_faction_name_parts_list = {
 	key = "cblt_name_1"
 	parts = {
-		"The Illustrious Liberal Chambers of Burghers and Tradefolk" = 1
+		"The Illustrious Chambers" = 1
 	}
 }
 

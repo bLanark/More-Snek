@@ -1,0 +1,15 @@
+# A war is beginning, executed for every country in the war.
+# Root = Country
+# From = War
+on_war_beginning = {
+	events = {
+		snek.31 # player one delcares on player two
+	}
+}
+
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		snek.32 # defender >95 war exhaustion
+	}
+}

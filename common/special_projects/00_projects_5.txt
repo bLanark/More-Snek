@@ -115,7 +115,7 @@ special_project = {
 	event_scope = planet_event
 	
 	on_success = {
-		owner = {
+		space_owner = {
 			country_event = { id = snek.12 }
 		}
 	}

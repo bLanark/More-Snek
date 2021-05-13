@@ -14,7 +14,7 @@ country_event = {
 	}
 	
 	trigger = {
-		num_planets > 3
+		num_owned_planets > 3
 		has_country_flag = grand_campaign_player_one
 		has_technology = tech_synthetic_workers
 	}

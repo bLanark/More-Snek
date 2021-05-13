@@ -1,15 +1,56 @@
 namespace = gc_roboleon
 #WRITTEN BY ALEXANDERBOESEN
 country_event = {
+	id = gc_roboleon.1
+	title = gc_roboleon.1.title
+	desc = gc_roboleon.1.desc
+	picture = GFX_evt_voting
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+		#days = 10
+	}
+	
+	trigger = {
+		num_planets > 3
+		has_country_flag = grand_campaign_player_one
+		has_technology = tech_synthetic_workers
+	}
+	
+	option = {
+		name = gc_roboleon.1.a
+		add_modifier = {
+				modifier = revolutionary_ideas
+				days = 3600
+		}
+		set_country_flag = robospierre
+	}
+}
+
+country_event = {
 	id = gc_roboleon.2
 	title = gc_roboleon.2.title
 	desc = gc_roboleon.2.desc
 	picture = GFX_evt_roboleon
 	
-	is_triggered_only = yes
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 60
+		#days = 5
+	}
+	
+	trigger = {
+		has_country_flag = robospierre
+	}
 	
 	immediate = {
-	
+		owner_species = {
+			save_event_target_as = og_species
+		}
+		
 		create_species = {
 			name = Spare-part
 			plural = Spare-parts
@@ -33,22 +74,7 @@ country_event = {
 			}
 		}
 		
-		create_leader = {
-			name = "L30N Spare-part"
-			species = last_created_species
-			
-			class = ruler
-			
-			skill = 7
-			
-			set_age = 5
-			
-			traits = {
-				trait = trait_ruler_charismatic
-				trait = trait_ruler_champion_of_the_people
-				trait = leader_trait_reformer
-			}
-		}
+		
 		
 		last_created_leader = {
 			set_leader_flag = roboleon
@@ -71,7 +97,470 @@ country_event = {
 				civic = civic_cutthroat_politics
 			}
 		}
-
+		
+		create_leader = {
+			name = "L30N Spare-part"
+			species = last_created_species
+			
+			class = ruler
+			
+			skill = 7
+			
+			set_age = 5
+			
+			traits = {
+				trait = trait_ruler_charismatic
+				trait = trait_ruler_champion_of_the_people
+				trait = leader_trait_reformer
+			}
+		}
+		
 		assign_leader = last_created_leader
+		
+		custom_tooltip = roboleon_small_rebellion
+		hidden_effect = {
+			random_owned_planet = {
+				set_planet_flag = revolt_in_progress
+				set_variable = {
+					which = unrest_50
+					value = 0
+				}
+				set_variable = {
+					which = rebel_armies_var
+					value = 0
+				}
+				multiply_variable = {
+					which = rebel_armies_var
+					value = 0.67
+				}
+				every_owned_pop = {
+					planet = {
+						change_variable = {
+							which = rebel_armies_var
+							value = 1
+						}
+					}
+				}
+				create_rebels = {
+					species = event_target:og_species
+					ethos = {
+								ethic = ethic_fanatic_authoritarian
+								ethic = ethic_xenophobe
+							}
+					authority = random
+					origin = "origin_separatists"
+					name = random
+					flag = random
+					effect = {
+						if = {
+							limit = {
+								has_trait = trait_necrophage
+							}
+							set_origin = origin_necrophage
+						}
+						set_country_flag = reactionary_roboleon_rebels
+						save_event_target_as = reactionary_rebels
+						establish_communications_no_message = root.owner
+						root = {
+							owner = {
+								every_relation = {
+									establish_communications_no_message = prevprevprev
+								}
+							}
+						}
+					}
+				}
+				while = {
+					limit = {
+						check_variable = {
+							which = rebel_armies_var
+							value > 0
+						}
+					}
+					create_army = {
+						owner = event_target:reactionary_rebels
+						species = event_target:reactionary_rebels
+						type = "assault_army"
+					}
+					change_variable = {
+						which = rebel_armies_var
+						value = -1
+					}
+				}
+				set_planet_flag = reactionary_revolt
+				set_timed_planet_flag = {
+					flag = recent_unrest_event
+					days = 720
+				}
+				set_variable = {
+					which = rebel_armies_var
+					value = 0
+				}
+			}
+			create_fleet = {
+				set_take_point = yes
+				effect = {
+					set_owner = last_created_country
+
+					while = {
+						count = 20
+						create_ship = {
+							name = random
+							random_existing_design = corvette
+						}
+					}
+					while = {
+						count = 10
+						create_ship = {
+							name = random
+							random_existing_design = destroyer
+						}
+					}
+					while = {
+						count = 5
+						create_ship = {
+							name = random
+							random_existing_design = cruiser
+						}
+					}
+
+					set_location = last_created_country.capital_star
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = gc_roboleon.2.b
+		custom_tooltip = roboleon_large_rebellion
+		hidden_effect = {
+			random_owned_planet = {
+				set_planet_flag = revolt_in_progress
+				set_variable = {
+					which = unrest_50
+					value = 0
+				}
+				set_variable = {
+					which = rebel_armies_var
+					value = 0
+				}
+				multiply_variable = {
+					which = rebel_armies_var
+					value = 0.67
+				}
+				every_owned_pop = {
+					planet = {
+						change_variable = {
+							which = rebel_armies_var
+							value = 1
+						}
+					}
+				}
+				create_rebels = {
+					species = last_created_species
+					ethos = {
+								ethic = ethic_fanatic_materialist
+								ethic = ethic_xenophile
+							}
+					authority = auth_dictatorial
+					origin = "origin_separatists"
+					name = random
+					flag = random
+					effect = {
+						set_country_flag = roboleon_rebels
+						save_event_target_as = roboleon_rebels
+						establish_communications_no_message = root.owner
+						root = {
+							owner = {
+								every_relation = {
+									establish_communications_no_message = prevprevprev
+								}
+							}
+						}
+					}
+				}
+				while = {
+					limit = {
+						check_variable = {
+							which = rebel_armies_var
+							value > 0
+						}
+					}
+					create_army = {
+						owner = event_target:roboleon_rebels
+						species = event_target:roboleon_rebels
+						type = "robotic_army"
+					}
+					change_variable = {
+						which = rebel_armies_var
+						value = -1
+					}
+				}
+				set_planet_flag = roboleon_revolt
+				set_timed_planet_flag = {
+					flag = recent_unrest_event
+					days = 720
+				}
+				set_variable = {
+					which = rebel_armies_var
+					value = 0
+				}
+			}
+			while = {
+				count = 2
+				random_owned_planet = {
+					limit = {
+						NOT = {
+							has_planet_flag = roboleon_revolt
+						}
+					}
+					set_variable = {
+						which = unrest_50
+						value = 0
+					}
+					set_variable = {
+						which = rebel_armies_var
+						value = 0
+					}
+					multiply_variable = {
+						which = rebel_armies_var
+						value = 0.67
+					}
+					every_owned_pop = {
+						planet = {
+							change_variable = {
+								which = rebel_armies_var
+								value = 1
+							}
+						}
+					}
+					while = {
+						limit = {
+							check_variable = {
+								which = rebel_armies_var
+								value > 0
+							}
+						}
+						create_army = {
+							owner = event_target:roboleon_rebels
+							species = event_target:roboleon_rebels
+							type = "robotic_army"
+						}
+						change_variable = {
+							which = rebel_armies_var
+							value = -1
+						}
+					}
+					set_planet_flag = roboleon_revolt
+					set_timed_planet_flag = {
+						flag = recent_unrest_event
+						days = 720
+					}
+					set_variable = {
+						which = rebel_armies_var
+						value = 0
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = gc_roboleon.3
+	#hide_window = yes
+	
+	#is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	trigger = {
+		OR = {
+			has_country_flag = reactionary_roboleon_rebels
+			has_country_flag = roboleon_rebels
+		}
+		NOT = {
+			has_country_flag = boon_given
+		}
+		num_owned_planets > 0
+	}
+	immediate = {
+		set_country_flag = boon_given
+		add_resource = {
+							food = 20000
+							minerals = 50000
+							energy = 50000
+							alloys = 20000
+							consumer_goods = 20000
+							influence = 250
+							unity = 10000
+		}
+	}
+}
+
+# Initial rebels manage to take control of the planet, happens before the new owner is set, after the war is created.
+# This = Rebel Country
+# From = Planet
+country_event = {
+	id = gc_roboleon.4
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = { has_country_flag = roboleon_rebels }
+
+	immediate = {
+		From = { 
+			remove_planet_flag = revolt_in_progress 
+			solar_system = {
+				if = {
+					limit = {
+						exists = starbase
+					}
+					starbase = {
+						set_owner = root
+					}
+				}
+			}
+		}
+		create_leader = {
+			name = "L30N Spare-part"
+			species = owner_main_species
+			
+			class = ruler
+			
+			skill = 7
+			
+			set_age = 5
+			
+			traits = {
+				trait = trait_ruler_charismatic
+				trait = trait_ruler_champion_of_the_people
+				trait = leader_trait_reformer
+			}
+		}
+		assign_leader = last_created_leader
+		from.owner = {
+			save_event_target_as = rebelled_against
+			country_event = { id = unrest.4211 }
+		}
+		declare_war = {
+			target = event_target:rebelled_against
+			name = "Spare-part Revolution"
+			attacker_war_goal = wg_machine_uprising
+		}
+		from = {
+			add_modifier = { 
+				modifier = insurgents_free
+				days = 7200
+			}
+			solar_system = {
+				add_claims = {
+					who = event_target:rebelled_against
+					num_of_claims = 1
+					show_notification = no
+				}
+			}
+		}
+		every_galaxy_planet = {
+			limit = {
+				has_planet_flag = roboleon_revolt
+			}
+			create_fleet = {
+					#set_take_point = yes
+					effect = {
+						set_owner = last_created_country
+
+						while = {
+							count = 20
+							create_ship = {
+								name = random
+								random_existing_design = corvette
+							}
+						}
+						while = {
+							count = 10
+							create_ship = {
+								name = random
+								random_existing_design = destroyer
+							}
+						}
+						while = {
+							count = 5
+							create_ship = {
+								name = random
+								random_existing_design = cruiser
+							}
+						}
+						while = {
+							count = 1
+							create_ship = {
+								name = random
+								random_existing_design = battleship
+							}
+						}
+
+						#set_location = last_created_country.capital_star
+						set_location = prev.star
+					}
+			}
+			remove_planet_flag = roboleon_revolt
+		}
+
+	}
+}
+
+country_event = {
+	id = gc_roboleon.5
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = { has_country_flag = reactionary_roboleon_rebels }
+
+	immediate = {
+		From = { 
+			remove_planet_flag = revolt_in_progress 
+			solar_system = {
+				if = {
+					limit = {
+						exists = starbase
+					}
+					starbase = {
+						set_owner = root
+					}
+				}
+			}
+		}
+		create_leader = {
+			class = ruler
+			species = owner_main_species
+			name = random
+			skill = 2
+			traits = {}
+		}
+		assign_leader = last_created_leader
+		ruler = {
+			add_random_leader_trait = yes
+		}
+		from.owner = {
+			save_event_target_as = rebelled_against
+			country_event = { id = unrest.4211 }
+		}
+		from = {
+			add_modifier = { 
+				modifier = insurgents_free
+				days = 7200
+			}
+			solar_system = {
+				add_claims = {
+					who = event_target:rebelled_against
+					num_of_claims = 1
+					show_notification = no
+				}
+			}
+		}
+		from = { remove_planet_flag = reactionary_revolt }
 	}
 }

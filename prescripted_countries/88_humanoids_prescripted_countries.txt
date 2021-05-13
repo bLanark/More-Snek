@@ -13,7 +13,7 @@ humans1_1 = {
 		name = "PRESCRIPTED_species_name_humans1"
 		plural = "PRESCRIPTED_species_plural_humans1"
 		adjective = "PRESCRIPTED_species_adjective_humans1"
-		name_list = "HUMAN1"
+		name_list = "SNK1"
 		trait = "trait_adaptive"
 		trait = "trait_nomadic"
 		trait = "trait_wasteful"
@@ -46,7 +46,7 @@ humans1_1 = {
 	empire_flag = {
 		icon= {
 			category = "human"
-			file = "flag_human_9.dds"
+			file = "Sun.dds"
 		}
 		background= {
 			category = "backgrounds"
@@ -75,7 +75,7 @@ humans1_1 = {
 humans2_1 = {
 	name = "Crusaders of Cygnus"
 	adjective = "Crusader"
-	spawn_enabled = yes # yes / no / always
+	spawn_enabled = always # yes / no / always
 	
 	ship_prefix = "HISS"
 	

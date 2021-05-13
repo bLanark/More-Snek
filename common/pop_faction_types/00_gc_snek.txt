@@ -97,8 +97,10 @@ gc_snek = {
 		}
 		
 		modifier = {
-			factor = 2.0
-			is_species_class = REP
+			factor = 1.5
+			species = {
+				Is_species_class = REP
+			}
 		}
 		
 		modifier = {

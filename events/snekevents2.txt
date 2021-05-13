@@ -15,7 +15,7 @@ planet_event = {
 		#days = 10
 	}
 	pre_triggers = {
-    has_owner = yes
+    	has_owner = yes
 }
 	trigger = {
 		owner = {

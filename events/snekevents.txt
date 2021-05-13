@@ -39,7 +39,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	mean_time_to_happen = {
+	mean_time_to_happen = {+-+
 		days = 1
 	}
 
@@ -143,20 +143,58 @@ planet_event = {
 	picture = GFX_evt_civil_action
 	
 	is_triggered_only = yes 
-	fire_only_once = yes
-	#insert immediate for either pops changing or infulence. 
-
 	option = {
 		name = snek.6.a
 		hidden_effect = {
 			random_list = {
 				50 = {
-					country_event = { id = snek.7 days = 10 }
+					country_event = { id = snek.7 }
 				}
 				50 = {
 					planet = {					
-						planet_event = { id = snek.8 days = 10 }
+						country_event = { id = snek.8 }
 					}
+				}
+			}
+			random_owned_planet = {
+				limit = {
+				  has_planet_flag = planet_earth
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					pop_change_ethic = ethic_fanatic_materialist
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					pop_change_ethic = ethic_fanatic_materialist
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					pop_change_ethic = ethic_fanatic_materialist
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					pop_change_ethic = ethic_fanatic_spiritualist 
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					pop_change_ethic = ethic_fanatic_spiritualist
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					pop_change_ethic = ethic_fanatic_spiritualist
 				}
 			}
 		}
@@ -187,7 +225,7 @@ country_event = {
 }
 
 #Protests turn Violent! - Sub event of snek.6 - Crusaders event 3.3
-planet_event = {
+country_event = {
 	id = snek.8
 	title = "snek.8.name"
 	desc = "snek.8.desc"
@@ -203,17 +241,18 @@ planet_event = {
 				limit = {
 				  has_planet_flag = planet_earth
 				}
-				add_planet_devastation = 5
 				random_owned_pop = {
 					limit = {
 						is_sapient = yes
 					}
-					kill_pop = yes
+					kill_pop = yes 
 				}
+				add_planet_devastation = 5				
 			}
 		}
 	}
 }
+# - Triggers snek.11
 country_event = {
     id = snek.10
 	hide_window = yes
@@ -250,9 +289,9 @@ country_event = {
 
 	option = {
 		name = snek.11.a
-		enable_special_project = {
+		enable_special_project = { #Bug - Doesn't Create project
 			name = "SNEK_MONOLITH_PROJECT"
-			#location = event_target:monolith_location_snek
+			#location = event_target:monolith_location_snek 
 			owner = root
 			location = root
 		}
@@ -300,7 +339,49 @@ country_event = {
 
 	option = {
 		name = snek.13.a
-		#Pop Conversion 
+		hidden_effect = {
+			random_owned_planet = {
+				limit = {
+				  has_planet_flag = planet_earth
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					pop_change_ethic = ethic_fanatic_xenophobe
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					pop_change_ethic = ethic_fanatic_xenophobe
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					pop_change_ethic = ethic_fanatic_xenophobe
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					pop_change_ethic = ethic_fanatic_spiritualist 
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					pop_change_ethic = ethic_fanatic_spiritualist
+				}
+				random_owned_pop = {
+					limit = {
+						is_sapient = yes
+					}
+					pop_change_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
 	}
 }
 
@@ -316,7 +397,8 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		has_country_flag = grand_campaign_player_one		
+		has_country_flag = grand_campaign_player_one	
+		has_modifier = unveiled	
 	}
 
 	mean_time_to_happen = {
@@ -453,31 +535,45 @@ country_event = {
 	}
 }
 
-
-planet_event = {
-	id = snek.28
-	title = "snek.28.name"
-	desc = "snek.28.desc"
-	picture = GFX_evt_civil_action
+#Triggers snek.28
+country_event = {
+    id = snek.29
+	hide_window = yes
 
 	fire_only_once = no
 
+    trigger = {
+		has_country_flag = grand_campaign_player_one
+    }
 	mean_time_to_happen = {
 		days = 720
 	}
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				planet_stability < 50
+				NOT = {
+					has_modifier = ang_masses
+					has_modifier = pas_masses
+				}
+	  		}
+			planet_event = { id = snek.28 }
+		}
+	}
+}
+
+
+planet_event = { 
+	id = snek.28 
+	title = "snek.28.name"
+	desc = "snek.28.desc"
+	picture = GFX_evt_civil_action
+	is_triggered_only = yes
 
 	pre_triggers = {
 		has_owner = yes
 		has_ground_combat = no 
 	}	
-
-	trigger = {
-		planet_stability < 50
-		NOT = {
-			has_modifier = ang_masses
-			has_modifier = pas_masses
-		}
-	}
 
 	option = {
 		name = snek.28.a
@@ -486,7 +582,6 @@ planet_event = {
 			months = 24
 		}
 	}
-
 	option = {
 		name = snek.28.b
 		add_modifier = {
@@ -510,14 +605,12 @@ country_event = {
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		months = 1
+		months = 4
 	}
 
 	trigger = {
 		has_country_flag = grand_campaign_player_one
-		ai = no
 	}
-
 
 	option = {
 		name = snek.30.a
@@ -541,8 +634,7 @@ country_event = {
 
 	trigger = {
 		has_country_flag = grand_campaign_player_one
-		is_at_war_with <grand_campaign_player_two>
-		ai = no
+		is_at_war_with < grand_campaign_player_two
 	}
 
 	option = {
@@ -566,9 +658,8 @@ country_event = {
 
 	trigger = {
 		has_country_flag = grand_campaign_player_one
-		is_at_war_with <grand_campaign_player_two>
+		is_at_war_with < grand_campaign_player_two
 		defender_war_exhaustion > 0.95
-		ai = no
 	}
 
 	option = {

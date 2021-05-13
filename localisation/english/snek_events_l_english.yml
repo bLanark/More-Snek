@@ -1,7 +1,7 @@
 ﻿l_english:
  
  snek.1.name:0 "A Most Serpentine & Serene Anniversary"
- snek.1.desc:0 "It has been 1300 years since the refounding of the Church of the Victorious Snek and over a century since the great Schism and Exodus. Since then, the empire has enjoyed an era of peace and prosperity. As [Root.Leader.GetName] gazes at the stars from his balcony, only one thing occupies [Root.Leader.GetHerHis] mind, ambition. "
+ snek.1.desc:0 "It has been 1300 years since the refounding of the Church of the Victorious Snek and over a century since the great Schism and Exodus. Since then, the empire has enjoyed an era of peace and prosperity. As [Root.Leader.GetName] gazes at the stars from [Root.Leader.GetHerHis] balcony, only one thing occupies [Root.Leader.GetHerHis] mind, ambition. "
  snek.1.a:0 "To infinity and beyond!"
 
  snek.2.name:0 "Renovatio Imperii"
@@ -75,21 +75,17 @@
  snek.28.b:0 "Okay, fine, no more ‘emergency power’ requests… for now"
  
  snek.30.name:0 "Mod Credits"
- snek.30.desc:0 "This mod was worked on by a number of participants in the 2021 PDXCon Grand Campaign. The members came together over a short period to allow their wacky dream to continue its beautiful existence. Without the following people, none of this would have been possible. \n\n\The Coders\":\" Blanark, Jerry_XLII, and AlexanderBoesen \n\n\The Writers\":\" Neinguy1945, Charlemagne, Charles IV, and all those from other parties who contributed their ideas \n\n\The Quorum\":\" Saint Paradoxus the Reluctant, Crendra Hiss of Snek, A Russian Camel, Wikkel High Priest of Snek, XiphosS, Snek’s Disciple Epicdude8428, Rangerscrolls, Tinny, Apophis, SilasPT, Charles IV, and Neinguy1945 \n\n\And last but not least, a special thanks to \":\" CountCristo, DJTruthsayer, Mr Freake, and Addaway, for their crucial contributions to making this glorious idea a reality."
- snek.30.a.0 "Somebody get these people a medal!"
+ snek.30.desc:0 "This mod was worked on by a number of participants in the 2021 PDXCon Grand Campaign. The members came together over a short period to allow their wacky dream to continue its beautiful existence. Without the following people, none of this would have been possible. \n\nThe Coders: Blanark, AlexanderBoesen, and Jerry_XLII \n\nThe Writers: Charles IV, Charlemagne, Neinguy1945, and all those from other parties who contributed their ideas \n\nThe Artists: Charles IV \n\nThe Quorum: Saint Paradoxus the Reluctant, Crendra Hiss of Snek, A Russian Camel, Wikkel High Priest of Snek, XiphosS, Snek’s Disciple Epicdude8428, Rangerscrolls, Tinny, Apophis, SilasPT, Charles IV, and Neinguy1945 \n\nAnd last but not least, a special thanks to: CountCristo, DJTruthsayer, Mr Freake, and Addaway, for their crucial contributions to making this glorious idea a reality."
+ snek.30.a:0 "Somebody get these people a medal!"
 
  snek.70.name:0 "Hail the Nightmare"
  snek.70.desc:0 "The Crusaders of Cygnus have defeated another alien empire in its quest to “purify” the galaxy. Despite our best efforts, news of this has spread to the general population causing mass panic. Alien refugees are already starting their mass exodus."
  snek.70.a:0 "Remain Calm!"
 
- snek.30.name:0 "Mod Credits"
- snek.30.desc:0 "This mod was worked on by a number of participants in the 2021 PDXCon Grand Campaign. The members came together over a short period to allow their wacky dream to continue its beautiful existence. Without the following people, none of this would have been possible. \n\n\The Coders\":\" Blanark, Jerry_XLII, and AlexanderBoesen \n\n\The Writers\":\" Neinguy1945, Charlemagne, Charles IV, and all those from other parties who contributed their ideas \n\n\The Quorum\":\" Saint Paradoxus the Reluctant, Crendra Hiss of Snek, A Russian Camel, Wikkel High Priest of Snek, XiphosS, Snek’s Disciple Epicdude8428, Rangerscrolls, Tinny, Apophis, SilasPT, Charles IV, and Neinguy1945 \n\n\And last but not least, a special thanks to \":\" CountCristo, DJTruthsayer, Mr Freake, and Addaway, for their crucial contributions to making this glorious idea a reality."
- snek.30.a.0 "Somebody get these people a medal!"
-
  snek.31.name:0 "The War to End all Wars"
- snek.31.desc:0 "You ask, what is our policy? I will say\":\ It is to wage war, by system, by starbase, and by planet, with all our might and with all the strength that Lord Snek can give us; to wage war against a monstrous tyranny, never surpassed in the dark and lamentable catalog of human crime. That is our policy. You ask, what is our aim? I can answer in one word\":\ Victory. Victory at all costs—Victory in spite of all terror—Victory, however long and hard the road may be, for without victory there is no survival."
- snek.31.a.0 "This nightmare ends NOW"
+ snek.31.desc:0 "You ask, what is our policy? \n\nI will say, it is to wage war, by system, by starbase, and by planet, with all our might and with all the strength that Lord Snek can give us; to wage war against a monstrous tyranny, never surpassed in the dark and lamentable catalog of human crime. \n\nThat is our policy. \n\nYou ask, what is our aim? \n\nI can answer in one word - Victory. \nVictory at all costs \nVictory in spite of all terror \nVictory, however long and hard the road may be, for without victory there is no survival."
+ snek.31.a:0 "This nightmare ends NOW"
  
  snek.32.name:0 "The Clock Strikes Midnight"
  snek.32.desc:0 "When the Lamb broke the fourth seal, I heard the voice of the fourth living creature saying, \"Come.\" I looked, and behold, a pale horse; and he who sat on it had the name Death."
- snek.32.a.0 "And Hell followed with him."
+ snek.32.a:0 "And Hell followed with him."

@@ -5,7 +5,7 @@ humans1_1 = {
 	spawn_enabled = no # yes / no / always
 	ignore_portrait_duplication = yes
 	
-	ship_prefix = "PRESCRIPTED_ship_prefix_humans1"
+	ship_prefix = "PDS"
 	
 	species = {
 		class = "HUM"
@@ -50,7 +50,7 @@ humans1_1 = {
 		}
 		background= {
 			category = "backgrounds"
-			file = "00_solid.dds"
+			file = "icarvs.dds"
 		}
 		colors={
 			"blue"

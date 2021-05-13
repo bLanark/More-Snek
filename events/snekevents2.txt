@@ -11,8 +11,8 @@ planet_event = {
 	show_sound = event_ground_battle
 	
 	mean_time_to_happen = {
-		#months = 60
-		days = 10
+		months = 60
+		#days = 10
 	}
 	
 	trigger = {
@@ -101,6 +101,30 @@ country_event = {
 }
 
 country_event = {
+	id = snek2.3
+	title = "snek2.3.name"
+	desc = "snek2.3.desc"
+	picture = GFX_evt_cover_blown
+	location = root.capital_scope
+	show_sound = event_planetary_riot
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = {
+		capital_scope = {
+			add_modifier = {
+				modifier = cristo_attacked
+				days = 360
+			}
+		}
+	}
+}
+
+country_event = {
 	id = snek2.10
 	title = "snek2.10.name"
 	desc = "snek2.10.desc"
@@ -110,10 +134,10 @@ country_event = {
 	
 	diplomatic = yes
 	
-	#fire_only_once = no
+	fire_only_once = no
 
 	mean_time_to_happen = {
-		months = 90
+		months = 180
 	}
 	
 	picture_event_data = {
@@ -127,6 +151,7 @@ country_event = {
 	trigger = {
 		has_country_flag = grand_campaign_player_one
 		is_subject_type = scion
+		years_passed > 3
 		#ai = no
 	}
 	
@@ -153,7 +178,7 @@ country_event = {
 	#fire_only_once = no
 
 	mean_time_to_happen = {
-		months = 60
+		months = 120
 		#days = 45
 	}
 	

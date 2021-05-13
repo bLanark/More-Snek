@@ -58,7 +58,7 @@ country_event = {
 						who = event_target:scion_master
 						modifier = opinion_scion
 					}
-					country_event = { id = origin.10 days = 3 }
+					country_event = { id = origin.10 days = 10 }
 				}
 			}
 		}

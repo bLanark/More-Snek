@@ -99,3 +99,87 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = snek2.10
+	title = "snek2.10.name"
+	desc = "snek2.10.desc"
+	#picture = GFX_evt_vivisection
+	#location = root
+	#show_sound = notification_uplift
+	
+	diplomatic = yes
+	
+	#fire_only_once = no
+
+	mean_time_to_happen = {
+		months = 90
+	}
+	
+	picture_event_data = {
+		portrait = event_target:scion_master
+		planet_background = event_target:scion_master
+		graphical_culture = event_target:scion_master
+		city_level = event_target:scion_master
+		room = event_target:scion_master
+	}
+	
+	trigger = {
+		has_country_flag = grand_campaign_player_one
+		is_subject_type = scion
+		#ai = no
+	}
+	
+	immediate = {
+		overlord = { save_event_target_as = scion_master }
+		set_country_flag = snek_ascension_started
+	}
+	
+	option = {
+		name = snek2.10.a
+		Random_owned_pop = { kill_pop = yes}
+	}
+}
+country_event = {
+	id = snek2.11
+	title = "snek2.11.name"
+	desc = "snek2.11.desc"
+	#picture = GFX_evt_vivisection
+	#location = root
+	#show_sound = notification_uplift
+	
+	diplomatic = yes
+	
+	#fire_only_once = no
+
+	mean_time_to_happen = {
+		months = 60
+		#days = 45
+	}
+	
+	picture_event_data = {
+		portrait = event_target:scion_master
+		planet_background = event_target:scion_master
+		graphical_culture = event_target:scion_master
+		city_level = event_target:scion_master
+		room = event_target:scion_master
+	}
+	
+	trigger = {
+		has_country_flag = grand_campaign_player_one
+		is_subject_type = scion
+		#ai = no
+		has_country_flag = snek_ascension_started
+	}
+	
+	immediate = {
+		overlord = { save_event_target_as = scion_master }
+	}
+	
+	option = {
+		name = snek2.11.a
+		Random_owned_pop = { kill_pop = yes}
+		Random_owned_pop = { kill_pop = yes}
+		Random_owned_pop = { kill_pop = yes}
+	}
+}

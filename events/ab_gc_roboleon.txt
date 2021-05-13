@@ -85,37 +85,40 @@ country_event = {
 	option = {
 		name = gc_roboleon.2.a
 		
-		clear_ethos = yes
-		shift_ethic = "ethic_xenophile"
-		shift_ethic = "ethic_fanatic_authoritarian"
-		
-		change_government = {
-			authority = auth_dictatorial
-			civics = {
-				civic = civic_free_haven
-				civic = civic_philosopher_king
-				civic = civic_cutthroat_politics
+		hidden_effect = {
+			clear_ethos = yes
+			shift_ethic = "ethic_xenophile"
+			shift_ethic = "ethic_fanatic_authoritarian"
+			
+			change_government = {
+				authority = auth_dictatorial
+				civics = {
+					civic = civic_free_haven
+					civic = civic_philosopher_king
+					civic = civic_cutthroat_politics
+				}
 			}
-		}
-		
-		create_leader = {
-			name = "L30N Spare-part"
-			species = last_created_species
 			
-			class = ruler
-			
-			skill = 7
-			
-			set_age = 5
-			
-			traits = {
-				trait = trait_ruler_charismatic
-				trait = trait_ruler_champion_of_the_people
-				trait = leader_trait_reformer
+			create_leader = {
+				name = "L30N Spare-part"
+				species = last_created_species
+				
+				class = ruler
+				
+				skill = 7
+				
+				set_age = 5
+				
+				traits = {
+					trait = trait_ruler_charismatic
+					trait = trait_ruler_champion_of_the_people
+					trait = leader_trait_reformer
+				}
 			}
+			
+			assign_leader = last_created_leader
 		}
-		
-		assign_leader = last_created_leader
+		custom_tooltip = roboleon_change_government
 		
 		custom_tooltip = roboleon_small_rebellion
 		hidden_effect = {

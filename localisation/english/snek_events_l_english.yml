@@ -28,17 +28,10 @@
  snek.8.desc:0 "Despite our best efforts, the protest has turned violent. Lives have been lost and most importantly government property has been damaged. While our Enforcers managed to end the riot after a few days, it is clear that many lives have been lost on all sides. \n\nDespite order being officially restored, many fear that this incident is only the prelude to another Great Schism and civil war."
  snek.8.a:0 "This is not good"
 
-<<<<<<< HEAD
- snek.10.name:0 "Mod Credits"
- snek.10.desc:0 "This mod was worked on by a number of participants in the 2021 PDXCon Grand Campaign. The members came together over a short period to allow their wacky dream to continue its beautiful existence. Without the following people, none of this would have been possible. \n\n\The Coders\":\" Blanark, Jerry_XLII, and AlexanderBoesen \n\n\The Writers\":\" Neinguy1945, Charlemagne, Charles IV, and all those from other parties who contributed their ideas \n\n\The Quorum\":\" Saint Paradoxus the Reluctant, Crendra Hiss of Snek, A Russian Camel, Wikkel High Priest of Snek, XiphosS, Snek’s Disciple Epicdude8428, Rangerscrolls, Tinny, Apophis, SilasPT, Charles IV, and Neinguy1945 \n\n\And last but not least, a special thanks to \":\" CountCristo, DJTruthsayer, Mr Freake, and Addaway, for their crucial contributions to making this glorious idea a reality."
- snek.10.a.0 "Somebody get these people a medal!"
- 
-=======
  snek.11.name:0 "Europa Universalis"
  snek.11.desc:0 "One of our probes on Europa has discovered an anomaly. A giant black monolith has seemingly appeared out of thin air near the last known location of the Snek-Purist exodus. \n\nSome of our scientists are clamoring for us to retrieve this monolith before someone else gets their hands on it."
  snek.11.a:0 "We must investigate this immediately!"
 
->>>>>>> main
  snek.12.name:0 "Tick-Tock"
  snek.12.desc:0 "After months of studying the Monolith without success, it did something... unexpected, It turned on. Specifically, it displayed a holographic video complete with disturbing imagery and words. \n\nPictures of the Prophet and Lord Snek flashed violently across the projected screen. Then the audio recording began. \n\n\"Remain Calm. The Blessed Regency continues. The Galaxy shall be purified. The Prophet shall return. The Crusaders of Cygnus shall endure. There is much to be done.\"\n\nWhatever questions about the Monolith’s origins melted away in that instance. The scientists present were absolutely stunned. As the audio message repeated itself over and over again, some scientists laughed, some cried, most were silent. \n\nBut one feeling was felt by all.\n\nFear."
  snek.12.a:0 "What? How could this happen? They're supposed to be dead!"
@@ -85,4 +78,6 @@
  snek.70.desc:0 "The Crusaders of Cygnus have defeated another alien empire in its quest to “purify” the galaxy. Despite our best efforts, news of this has spread to the general population causing mass panic. Alien refugees are already starting their mass exodus."
  snek.70.a:0 "Remain Calm!"
 
- 
+ snek.30.name:0 "Mod Credits"
+ snek.30.desc:0 "This mod was worked on by a number of participants in the 2021 PDXCon Grand Campaign. The members came together over a short period to allow their wacky dream to continue its beautiful existence. Without the following people, none of this would have been possible. \n\n\The Coders\":\" Blanark, Jerry_XLII, and AlexanderBoesen \n\n\The Writers\":\" Neinguy1945, Charlemagne, Charles IV, and all those from other parties who contributed their ideas \n\n\The Quorum\":\" Saint Paradoxus the Reluctant, Crendra Hiss of Snek, A Russian Camel, Wikkel High Priest of Snek, XiphosS, Snek’s Disciple Epicdude8428, Rangerscrolls, Tinny, Apophis, SilasPT, Charles IV, and Neinguy1945 \n\n\And last but not least, a special thanks to \":\" CountCristo, DJTruthsayer, Mr Freake, and Addaway, for their crucial contributions to making this glorious idea a reality."
+ snek.30.a.0 "Somebody get these people a medal!"

@@ -259,33 +259,6 @@ country_event = {
 	}
 }
 
-#Mod Credits
-country_event = {
-	id = snek.10
-	title = "snek.10.name"
-	desc = "snek.10.desc"
-	picture = GFX_evt_synth_sabotage
-	location = root
-	show_sound = notification_uplift
-
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		months = 1
-	}
-
-	trigger = {
-		has_country_flag = grand_campaign_player_one
-		ai = no
-	}
-
-
-	option = {
-		name = snek.10.a
-		add_resource = { influence = 1}
-	}
-}
-
 #Tick-Tock - Monolith Event 2
 country_event = {
 	id = snek.12
@@ -524,6 +497,34 @@ planet_event = {
 		owner = { add_resource = { consumer_goods = -100 } }
 	}
 }
+
+#Mod Credits
+country_event = {
+	id = snek.30
+	title = "snek.30.name"
+	desc = "snek.30.desc"
+	picture = GFX_evt_synth_sabotage
+	location = root
+	show_sound = notification_uplift
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	trigger = {
+		has_country_flag = grand_campaign_player_one
+		ai = no
+	}
+
+
+	option = {
+		name = snek.30.a
+		add_resource = { influence = 1}
+	}
+}
+
 # Event under construction (CoC destroys an empire)
 #country_event = {
 #	id = snek.70

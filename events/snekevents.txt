@@ -9,7 +9,6 @@ country_event = {
 	location = root
 	show_sound = notification_uplift
 
-	is_triggered_only = yes
 	fire_only_once = yes
 
 	mean_time_to_happen = {
@@ -39,7 +38,6 @@ country_event = {
 	location = root
 	show_sound = notification_uplift
 
-	is_triggered_only = yes
 	fire_only_once = yes
 
 	mean_time_to_happen = {
@@ -71,7 +69,6 @@ country_event = {
 	location = root
 	show_sound = notification_uplift
 
-	is_triggered_only = yes
 	fire_only_once = yes
 
 	mean_time_to_happen = {
@@ -103,7 +100,6 @@ country_event = {
 	location = root
 	show_sound = notification_uplift
 
-	is_triggered_only = yes
 	fire_only_once = yes
 
 	trigger = {
@@ -124,7 +120,7 @@ country_event = {
 country_event = {
     id = snek.5
 	hide_window = yes
-	is_triggered_only = yes 
+
 	fire_only_once = yes
 
     trigger = {
@@ -134,12 +130,13 @@ country_event = {
 	mean_time_to_happen = {
 		months = 300
 	}
-
-	random_owned_planet = {
-		limit = {
-			has_planet_flag = planet_earth
-	  	}
-		planet_event = { id = snek.6 days = 30 random = 90 }
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = planet_earth
+	  		}
+			planet_event = { id = snek.6 }
+		}
 	}
 }
 
@@ -148,6 +145,7 @@ planet_event = {
 	id = snek.6
 	title = "snek.6.name"
 	desc = "snek.6.desc"	
+	picture = GFX_evt_civil_action
 	
 	is_triggered_only = yes 
 	fire_only_once = yes
@@ -155,19 +153,15 @@ planet_event = {
 
 	option = {
 		name = snek.6.a
-		pop_event = { id = snek.10 }
-		random_list = {
-			50 = {
-				hidden_effect = {
-					country_event = { id = snek.7}
+		hidden_effect = {
+			random_list = {
+				50 = {
+					country_event = { id = snek.7 days = 10 }
 				}
-
-			}
-			50 = {
-				planet = {
-					hidden_effect = {					
-						planet_event = { id = snek.8}
-					}	
+				50 = {
+					planet = {					
+						planet_event = { id = snek.8 days = 10 }
+					}
 				}
 			}
 		}
@@ -218,7 +212,6 @@ planet_event = {
 				random_owned_pop = {
 					limit = {
 						is_sapient = yes
-						is_robot_pop = no
 					}
 					kill_pop = yes
 				}
@@ -237,12 +230,8 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	mean_time_to_happen = {
-		days = 1
-	}
-
 	option = {
-		name = snek.1.a
+		name = snek.12.a
 		add_modifier = {
 			modifier = unveiled
 			months = 24
@@ -259,7 +248,6 @@ country_event = {
 	location = root
 	show_sound = notification_uplift
 
-	is_triggered_only = yes
 	fire_only_once = yes
 
 	mean_time_to_happen = {
@@ -287,7 +275,6 @@ country_event = {
 	location = root
 	show_sound = notification_uplift
 
-	is_triggered_only = yes
 	fire_only_once = yes
 
 	trigger = {
@@ -331,9 +318,9 @@ country_event = {
 
 #The Gift - 2 - Infulence loss
 country_event = {
-	id = snek.17
-	title = "snek.17.name"
-	desc = "snek.17.desc"
+	id = snek.18
+	title = "snek.18.name"
+	desc = "snek.18.desc"
 	picture = GFX_evt_in_the_dark
 
 	is_triggered_only = yes
@@ -352,8 +339,8 @@ country_event = {
 	picture = GFX_evt_salute
 	location = root
 	show_sound = notification_uplift
-
-	is_triggered_only = yes
+	
+	fire_only_once = yes
 
 	mean_time_to_happen = {
 		months = 300
@@ -385,7 +372,6 @@ country_event = {
 	location = root
 	show_sound = notification_uplift
 
-	is_triggered_only = yes
 	fire_only_once = yes
 
 	mean_time_to_happen = {
@@ -451,7 +437,6 @@ planet_event = {
 	}	
 
 	trigger = {
-		has_country_flag = grand_campaign_player_one
 		planet_stability < 50
 		NOT = {
 			has_modifier = ang_masses

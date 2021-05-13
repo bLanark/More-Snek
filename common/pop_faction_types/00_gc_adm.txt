@@ -183,7 +183,7 @@ gc_adm = {
 
 		trigger = {
 			owner = {
-				has_valid_civic = civic_distinguished_admirality
+				has_valid_civic = civic_distinguished_admiralty
 			}
 		}
 	}

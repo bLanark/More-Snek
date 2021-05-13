@@ -1,6 +1,16 @@
-on_press_begin = {
+on_game_start_country = {
 	events = {
 		gc_gamestart.1 #this marks the human empire on earth player one
 		gc_gamestart.2 #this changes CoC humans into scaly
+	}
+}
+# Initial rebels manage to take control of the planet, happens before the new owner is set, after the war is created.
+# This = Rebel Country
+# From = Planet
+# FromFrom = War
+on_rebels_take_planet = {
+	events = {
+		gc_roboleon.4
+		gc_roboleon.5
 	}
 }

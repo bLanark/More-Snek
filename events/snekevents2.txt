@@ -1,0 +1,101 @@
+namespace = snek2
+
+## NOT WORKING AS OF NOW. CAN'T SEEM TO BE ABLE TO USE GLOBAL EVENT TARGET (LOOK AT AB_GC_GAMESTART.TXT gc_gamestart.2)
+## WRITTEN BY ALEXANDERBOESEN
+
+planet_event = {
+	id = snek2.1
+	title = "snek2.1.name"
+	desc = "snek2.1.desc"
+	picture = GFX_evt_open_revolt
+	show_sound = event_ground_battle
+	
+	mean_time_to_happen = {
+		#months = 60
+		days = 10
+	}
+	
+	trigger = {
+		owner = {
+			has_country_flag = grand_campaign_player_one
+			is_at_war_with = event_target:coc_target
+		}
+		num_pops > 3
+		any_owned_pop = {
+			has_ethic = ethic_spiritualist
+		}
+	}
+	
+	immediate = {
+		random_owned_pop = {
+			save_event_target_as = rebel_species
+		}
+	}
+	
+	option = {
+		name = snek2.1.a
+		if = {
+			limit = {
+				num_pops > 30
+			}
+			while = {
+				count = 25
+				create_army = {
+						owner = event_target:coc_target
+						species = event_target:rebel_species
+						type = "assault_army"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				num_pops > 20
+			}
+			while = {
+				count = 18
+				create_army = {
+						owner = event_target:coc_target
+						species = event_target:rebel_species
+						type = "assault_army"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				num_pops > 10
+			}
+			while = {
+				count = 9
+				create_army = {
+						owner = event_target:coc_target
+						species = event_target:rebel_species
+						type = "assault_army"
+				}
+			}
+		}
+		else = {
+			while = {
+				count = 5
+				create_army = {
+						owner = event_target:coc_target
+						species = event_target:rebel_species
+						type = "assault_army"
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = snek2.2
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		declare_war = {
+			target = event_target:coc_target
+			name = "DEBUG WAR"
+			attacker_war_goal = wg_humiliation
+		}
+	}
+}

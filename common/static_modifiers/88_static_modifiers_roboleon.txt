@@ -1,0 +1,4 @@
+revolutionary_ideas = {
+	pop_ethic_materialist_attraction_mult = 0.1
+	pop_ethic_xenophile_attraction_mult = 0.1
+}

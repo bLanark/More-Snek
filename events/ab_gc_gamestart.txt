@@ -46,6 +46,7 @@ country_event = {
 			limit = {
 				has_country_flag = grand_campaign_player_two
 			}
+			save_global_event_target_as = coc_target
 			random_owned_species = {
 				set_species_flag = humans_2_species
 				change_species_portrait = humanoid_02

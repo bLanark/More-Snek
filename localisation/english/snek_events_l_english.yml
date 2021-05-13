@@ -16,10 +16,6 @@
  snek.4.desc:0 "[Root.Leader.GetName] sat down at [Root.Leader.GetHerHis] desk, exhausted after a long day of hard work. Incessant debate in the Senate can suck the life force out of even the most seasoned Senator. \n\nThe Speaker sighed. This job had aged [Root.Leader.GetHerHim] significantly. But despite all this, [Root.Leader.GetName] could not help but feel a sense of gratitude. [Root.Leader.GetSheHe] turned his attention to the Snekist cross mounted above the door. After all, it had only been a few decades since the Great Schism, since the Dark Times. \n\nThe Speaker could still remember the chaos and destruction of that era. How many lives were lost in that horrible war. But now [Root.Leader.GetName] felt confident that society had progressed beyond that. It was now a more civilised age. \n\nBut now was not the time to dwell on the past. For there was still much work to be done for the Speaker."
  snek.4.a:0 "At least the worst is behind us"
 
- #snek.5.name:0
- #snek.5.desc:0 
- #snek.5.a:0
-
  snek.6.name:0 "The Petition of 1000"
  snek.6.desc:0 "A group of student protestors have gathered by the capitol building today to decry what they call ‘Censorship of History.’ The government, however, calls it /"Keeping the Public safe from insurrectionary messages./" \n\nThese demonstrations, deemed ‘The Petition of 1000,’ have occurred every year on the anniversary of the Great Exodus. However this particular protest differs from all previous demonstrations.This time the students are joined by members of the Church of the Victorious Snek who ironically now march in support of their heretical and extremist brethren. Many officials are puzzled as to why they would be sympathetic to those who started the Great Schism. \n\nMeanwhile, a counter-protest movement has formed to challenge the aforementioned demonstration. Enforcers have been deployed to keep the peace but there is an uneasy feeling in the air."
  snek.6.a:0 "This is getting out of hand. Now there are two of them!"
@@ -32,8 +28,12 @@
  snek.8.desc:0 "Despite our best efforts, the protest has turned violent. Lives have been lost and most importantly government property has been damaged. While our Enforcers managed to end the riot after a few days, it is clear that many lives have been lost on all sides. \n\nDespite order being officially restored, many fear that this incident is only the prelude to another Great Schism and civil war."
  snek.8.a:0 "This is not good"
 
+ snek.11.name:0 "Europa Universalis"
+ snek.11.desc:0 "One of our probes on Europa has discovered an anomaly. A giant black monolith has seemingly appeared out of thin air near the last known location of the Snek-Purist exodus. \n\nSome of our scientists are clamoring for us to retrieve this monolith before someone else gets their hands on it."
+ snek.11.a:0 "We must investigate this immediately!"
+
  snek.12.name:0 "Tick-Tock"
- snek.12.desc:0 "After months of studying the Monolith without success, it did something... unexpected, It turned on. Specifically, it displayed a holographic video complete with disturbing imagery and words. \n\nPictures of the Prophet and Lord Snek flashed violently across the projected screen. Then the audio recording began. \n\n\“Remain Calm. The Blessed Regency continues. The Galaxy shall be purified. The Prophet shall return. The Crusaders of Cygnus shall endure. There is much to be done.\”\n\nWhatever questions about the Monolith’s origins melted away in that instance. The scientists present were absolutely stunned. As the audio message repeated itself over and over again, some scientists laughed, some cried, most were silent. \n\nBut one feeling was felt by all.\n\nFear."
+ snek.12.desc:0 "After months of studying the Monolith without success, it did something... unexpected, It turned on. Specifically, it displayed a holographic video complete with disturbing imagery and words. \n\nPictures of the Prophet and Lord Snek flashed violently across the projected screen. Then the audio recording began. \n\n\"Remain Calm. The Blessed Regency continues. The Galaxy shall be purified. The Prophet shall return. The Crusaders of Cygnus shall endure. There is much to be done.\"\n\nWhatever questions about the Monolith’s origins melted away in that instance. The scientists present were absolutely stunned. As the audio message repeated itself over and over again, some scientists laughed, some cried, most were silent. \n\nBut one feeling was felt by all.\n\nFear."
  snek.12.a:0 "What? How could this happen? They're supposed to be dead!"
 
  snek.13.name:0 "Snek-Purist Subversion"
@@ -47,7 +47,7 @@
 
  snek.17.name:0 "The Gift"
  snek.17.desc:0 "[Root.Leader.GetName] eagerly opens the box.\n\nThe package explodes."
- snek.17.a:0 "It’s treason then"
+ snek.17.a:0 "Darn"
 
  snek.18.name:0 "The Gift"
  snek.18.desc:0 "The box is placed in the storage room with hundreds of similar boxes. A few minutes later a rumbling could be heard from the room."

@@ -18,7 +18,6 @@ country_event = {
 	trigger = {
 		years_passed < 57
 		has_country_flag = grand_campaign_player_one
-		ai = no
 	}
 
 
@@ -46,8 +45,7 @@ country_event = {
 
 	trigger = {
 		is_galactic_emperor = yes
-		has_country_flag = grand_campaign_player_one
-		ai = no		
+		has_country_flag = grand_campaign_player_one	
 	}
 
 
@@ -78,7 +76,6 @@ country_event = {
 	trigger = {
 		is_galactic_community_member = yes
 		has_country_flag = grand_campaign_player_one
-		ai = no		
 	}
 
 
@@ -103,8 +100,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		has_country_flag = grand_campaign_player_one
-		ai = no				
+		has_country_flag = grand_campaign_player_one			
 	}
 
 	mean_time_to_happen = {
@@ -124,7 +120,6 @@ country_event = {
 	fire_only_once = yes
 
     trigger = {
-    	is_ai = no
 		has_country_flag = grand_campaign_player_one
     }
 	mean_time_to_happen = {
@@ -219,6 +214,50 @@ planet_event = {
 		}
 	}
 }
+country_event = {
+    id = snek.10
+	hide_window = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = grand_campaign_player_one
+	}
+	mean_time_to_happen = {
+		months = 480
+	}
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = planet_saturn_snek
+	  		}
+			#save_event_target_as = monolith_location_snek
+			country_event = { id = snek.11 }
+		}
+	}	
+}
+
+# - Monolith event 1
+country_event = {
+	id = snek.11
+	title = "snek.11.name"
+	desc = "snek.11.desc"
+	picture = GFX_evt_ancient_records
+	show_sound = notification_uplift
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = snek.11.a
+		enable_special_project = {
+			name = "SNEK_MONOLITH_PROJECT"
+			#location = event_target:monolith_location_snek
+			owner = root
+			location = root
+		}
+	}
+}
 
 #Tick-Tock - Monolith Event 2
 country_event = {
@@ -257,7 +296,6 @@ country_event = {
 	trigger = {
 		has_modifier = unveiled
 		has_country_flag = grand_campaign_player_one
-		ai = no
 	}
 
 	option = {
@@ -271,15 +309,14 @@ country_event = {
 	id = snek.16
 	title = "snek.16.name"
 	desc = "snek.16.desc"
-	picture = GFX_evt_in_the_dark
+	picture = GFX_evt_tradedeal
 	location = root
 	show_sound = notification_uplift
 
 	fire_only_once = yes
 
 	trigger = {
-		has_country_flag = grand_campaign_player_one
-		ai = no			
+		has_country_flag = grand_campaign_player_one		
 	}
 
 	mean_time_to_happen = {
@@ -305,7 +342,7 @@ country_event = {
 	id = snek.17
 	title = "snek.17.name"
 	desc = "snek.17.desc"
-	picture = GFX_evt_in_the_dark
+	picture = GFX_evt_news_room
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -321,7 +358,7 @@ country_event = {
 	id = snek.18
 	title = "snek.18.name"
 	desc = "snek.18.desc"
-	picture = GFX_evt_in_the_dark
+	picture = GFX_evt_archaeologists_escaping
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -350,9 +387,8 @@ country_event = {
 		has_country_flag = grand_campaign_player_one
 		is_at_war = yes
 		NOT = {
-  			has_modifier = march_of_the_eagles
-		}
-		ai = no		
+  			has_modifier = eagles_march
+		}	
 	}
 
 	option = {
@@ -380,7 +416,6 @@ country_event = {
 
 	trigger = {
 		has_country_flag = grand_campaign_player_one
-		ai = no	
 		has_country_flag = ecdysis_discovered
 	}
 	option = {

@@ -525,7 +525,6 @@ country_event = {
 	}
 }
 
-<<<<<<< HEAD
 country_event = {
 	id = snek.31
 	title = "snek.31.name"
@@ -579,8 +578,6 @@ country_event = {
 
 
 
-=======
->>>>>>> main
 # Event under construction (CoC destroys an empire)
 #country_event = {
 #	id = snek.70

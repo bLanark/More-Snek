@@ -114,13 +114,9 @@ special_project = {
 	location = yes
 	event_scope = planet_event
 	
-	requirements = {
-		shipclass_science_ship = 1
-		leader = scientist
-		skill = 2
-	}
-	
 	on_success = {
-		country_event = { id = snek.12 }
+		owner = {
+			country_event = { id = snek.12 }
+		}
 	}
 }

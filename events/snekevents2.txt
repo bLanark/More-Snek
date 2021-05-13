@@ -14,9 +14,12 @@ planet_event = {
 		months = 60
 		#days = 10
 	}
-	
+	pre_triggers = {
+		has_owner = yes
+	}
 	trigger = {
 		owner = {
+			exists = yes
 			has_country_flag = grand_campaign_player_one
 			is_at_war_with = event_target:coc_target
 		}

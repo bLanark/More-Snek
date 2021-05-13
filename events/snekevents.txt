@@ -39,7 +39,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	mean_time_to_happen = {+-+
+	mean_time_to_happen = {
 		days = 1
 	}
 
@@ -109,6 +109,9 @@ country_event = {
 
 	option = {
 		name = snek.4.a
+		hidden_effect = {
+			set_country_flag = phantom_menace_happened
+		}
 	}
 }
 
@@ -121,6 +124,7 @@ country_event = {
 
     trigger = {
 		has_country_flag = grand_campaign_player_one
+		has_country_flag = phantom_menace_happened
     }
 	mean_time_to_happen = {
 		months = 300
@@ -156,47 +160,26 @@ planet_event = {
 					}
 				}
 			}
-			random_owned_planet = {
-				limit = {
-				  has_planet_flag = planet_earth
-				}
+			while = {
+				count = 3
 				random_owned_pop = {
 					limit = {
-						is_sapient = yes
+						pop_has_happiness = yes
+						NOT = { has_ethic = ethic_materialist }
 					}
-					pop_change_ethic = ethic_fanatic_materialist
-				}
-				random_owned_pop = {
-					limit = {
-						is_sapient = yes
-					}
-					pop_change_ethic = ethic_fanatic_materialist
-				}
-				random_owned_pop = {
-					limit = {
-						is_sapient = yes
-					}
-					pop_change_ethic = ethic_fanatic_materialist
-				}
-				random_owned_pop = {
-					limit = {
-						is_sapient = yes
-					}
-					pop_change_ethic = ethic_fanatic_spiritualist 
-				}
-				random_owned_pop = {
-					limit = {
-						is_sapient = yes
-					}
-					pop_change_ethic = ethic_fanatic_spiritualist
-				}
-				random_owned_pop = {
-					limit = {
-						is_sapient = yes
-					}
-					pop_change_ethic = ethic_fanatic_spiritualist
+					pop_change_ethic = ethic_materialist
 				}
 			}
+			while = {
+				count = 3
+				random_owned_pop = {
+					limit = {
+						pop_has_happiness = yes
+						NOT = { has_ethic = ethic_spiritualist }
+					}
+					pop_change_ethic = ethic_spiritualist
+				}
+			}	
 		}
 	}
 }
@@ -252,29 +235,7 @@ country_event = {
 		}
 	}
 }
-# - Triggers snek.11
-country_event = {
-    id = snek.10
-	hide_window = yes
 
-	fire_only_once = yes
-
-	trigger = {
-		has_country_flag = grand_campaign_player_one
-	}
-	mean_time_to_happen = {
-		months = 480
-	}
-	immediate = {
-		random_owned_planet = {
-			limit = {
-				has_planet_flag = planet_saturn_snek
-	  		}
-			#save_event_target_as = monolith_location_snek
-			country_event = { id = snek.11 }
-		}
-	}	
-}
 
 # - Monolith event 1
 country_event = {
@@ -289,11 +250,20 @@ country_event = {
 
 	option = {
 		name = snek.11.a
-		enable_special_project = { #Bug - Doesn't Create project
-			name = "SNEK_MONOLITH_PROJECT"
-			#location = event_target:monolith_location_snek 
-			owner = root
-			location = root
+
+		capital_scope = { 
+			solar_system = { 
+				random_system_planet ={ 
+					limit = { 
+						has_planet_flag = planet_saturn_snek 
+					} 
+					enable_special_project = { #Bug - Doesn't Create project
+						name = "SNEK_MONOLITH_PROJECT"
+						owner = root
+						location = this	
+					}
+				}
+			}
 		}
 	}
 }
@@ -344,42 +314,26 @@ country_event = {
 				limit = {
 				  has_planet_flag = planet_earth
 				}
-				random_owned_pop = {
-					limit = {
-						is_sapient = yes
+				while = {
+					count = 3
+					random_owned_pop = {
+						limit = {
+							pop_has_happiness = yes
+							NOT = { has_ethic = ethic_xenophobe }
+						}
+						pop_change_ethic = ethic_xenophobe
 					}
-					pop_change_ethic = ethic_fanatic_xenophobe
 				}
-				random_owned_pop = {
-					limit = {
-						is_sapient = yes
+				while = {
+					count = 3
+					random_owned_pop = {
+						limit = {
+							pop_has_happiness = yes
+							NOT = { has_ethic = ethic_spiritualist }
+						}
+						pop_change_ethic = ethic_spiritualist
 					}
-					pop_change_ethic = ethic_fanatic_xenophobe
-				}
-				random_owned_pop = {
-					limit = {
-						is_sapient = yes
-					}
-					pop_change_ethic = ethic_fanatic_xenophobe
-				}
-				random_owned_pop = {
-					limit = {
-						is_sapient = yes
-					}
-					pop_change_ethic = ethic_fanatic_spiritualist 
-				}
-				random_owned_pop = {
-					limit = {
-						is_sapient = yes
-					}
-					pop_change_ethic = ethic_fanatic_spiritualist
-				}
-				random_owned_pop = {
-					limit = {
-						is_sapient = yes
-					}
-					pop_change_ethic = ethic_fanatic_spiritualist
-				}
+				}									
 			}
 		}
 	}
@@ -654,7 +608,7 @@ country_event = {
 
 	mean_time_to_happen = {
 		days = 1
-	}
+	}Th
 
 	trigger = {
 		has_country_flag = grand_campaign_player_one

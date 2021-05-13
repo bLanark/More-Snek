@@ -119,4 +119,9 @@ special_project = {
 			country_event = { id = snek.12 }
 		}
 	}
+	on_fail = { 
+		owner = {
+			country_event = { id = snek.12 }
+		}
+	}
 }

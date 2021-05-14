@@ -120,6 +120,10 @@ country_event = {
 	mean_time_to_happen = {
 		months = 120
 	}
+
+	trigger = { 
+		has_country_flag = grand_campaign_player_one
+	}
 	
 	option = {
 		capital_scope = {

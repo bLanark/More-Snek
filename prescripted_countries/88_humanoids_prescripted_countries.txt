@@ -25,7 +25,7 @@ humans1_1 = {
 	civics = { "civic_meritocracy" "civic_efficient_bureaucracy" }
 	government = gov_direct_democracy
 	
-	ethic = "ethic_xenophile"
+	ethic = "ethic_materialist"
 	ethic = "ethic_egalitarian"
 	ethic = "ethic_militarist"
 

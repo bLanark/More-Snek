@@ -495,9 +495,10 @@ country_event = {
 
 	fire_only_once = no
 
-    trigger = {
+    	trigger = {
 		has_country_flag = grand_campaign_player_one
-    }
+		NOT = { has_country_flag = discord_in_the_streets }
+    	}
 	mean_time_to_happen = {
 		days = 720
 	}
@@ -527,6 +528,13 @@ planet_event = {
 		has_owner = yes
 		has_ground_combat = no 
 	}	
+
+	immediate = {
+		set_timed_country_flag = {
+			flag = discord_in_the_streets
+			days = 3600
+		}
+	}
 
 	option = {
 		name = snek.28.a

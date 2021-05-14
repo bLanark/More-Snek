@@ -9,7 +9,8 @@ planet_event = {
 	desc = "snek2.1.desc"
 	picture = GFX_evt_open_revolt
 	show_sound = event_ground_battle
-	
+	fire_only_once = yes
+
 	mean_time_to_happen = {
 		months = 60
 		#days = 10
@@ -19,7 +20,7 @@ planet_event = {
 }
 	trigger = {
 		owner = {
-			exists = yes
+			exists = this
 			has_country_flag = grand_campaign_player_one
 			is_at_war_with = event_target:coc_target
 		}
@@ -31,9 +32,12 @@ planet_event = {
 	
 	immediate = {
 		random_owned_pop = {
-			save_event_target_as = rebel_species
+			species = {
+				save_event_target_as = rebel_species
+			}
 		}
 	}
+	
 	
 	option = {
 		name = snek2.1.a
@@ -42,7 +46,7 @@ planet_event = {
 				num_pops > 30
 			}
 			while = {
-				count = 25
+				count = 15
 				create_army = {
 						owner = event_target:coc_target
 						species = event_target:rebel_species
@@ -55,7 +59,7 @@ planet_event = {
 				num_pops > 20
 			}
 			while = {
-				count = 18
+				count = 9
 				create_army = {
 						owner = event_target:coc_target
 						species = event_target:rebel_species
@@ -68,7 +72,7 @@ planet_event = {
 				num_pops > 10
 			}
 			while = {
-				count = 9
+				count = 5
 				create_army = {
 						owner = event_target:coc_target
 						species = event_target:rebel_species
@@ -78,7 +82,7 @@ planet_event = {
 		}
 		else = {
 			while = {
-				count = 5
+				count = 4
 				create_army = {
 						owner = event_target:coc_target
 						species = event_target:rebel_species

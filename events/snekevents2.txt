@@ -126,6 +126,7 @@ country_event = {
 	}
 	
 	option = {
+		name = snek2.3.a
 		capital_scope = {
 			add_modifier = {
 				modifier = cristo_attacked
@@ -163,7 +164,7 @@ country_event = {
 		has_country_flag = grand_campaign_player_one
 		is_subject_type = scion
 		years_passed > 3
-		#ai = no
+		NOT = { has_country_flag = snek_ascension_started }
 	}
 	
 	immediate = {

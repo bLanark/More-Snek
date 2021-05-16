@@ -88,7 +88,7 @@ country_event = {
 		hidden_effect = {
 			clear_ethos = yes
 			shift_ethic = "ethic_xenophile"
-			shift_ethic = "ethic_fanatic_authoritarian"
+			shift_ethic = "ethic_fanatic_materialism"
 			
 			change_government = {
 				authority = auth_dictatorial

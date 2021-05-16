@@ -190,7 +190,7 @@ country_event = {
 	#fire_only_once = no
 
 	mean_time_to_happen = {
-		months = 120
+		months = 144
 		#days = 45
 	}
 	

@@ -1,0 +1,28 @@
+﻿ snek.32.name:0 "The Speech"
+ snek.32.desc:0 "The [Root.Leader.GetRulerTitle] steps up to the podium. As [Root.Leader.GetSheHe] starts surveys the senate [Root.Leader.GetSheHe] starts to speak. \"I'm sorry, but I don't want to be an emperor. That's not my business, I don't want to rule or conquer anyone. \n\nGreed has posioned men's souls, has barricaded the galaxy with hate, has goose-stepped us into misery and bloodshed. \n\nTo those who can hear me, I say - do not despair. The misery that is now upon us is but the passing of greed - the bitterness of men who fear the way of human progress. \n\nThe hate of men will pass, and dictators die, and the power they took from the people will return to the people, And so long as men die, liberty will never perish...\"\n\n[Root.Leader.GetName] stops to survey the shocked expressions of the senate. \"You, the people have the power - the power to create machines, the power to create happiness! \n\nYou, the people, have the power to make this life free and beautiful, to make this life a wonderful adventure, then - in the name of democracy - let us use that power - let us all unite! \n\nLet us fight for a new galaxy - a decent galaxy. Let us fight to free the galaxy - to do away with greed, with hate and intolerance. \"\n\n[Root.Leader.GetSheHe] Pauses once more before finishing their speech. \"Let us fight for a galaxy of reason, a galaxy where science and progress will lead to all men's happiness. In the name of democracy, let us all unite!\""
+ snek.32.a:0 "For Liberty!"
+ snek.32.b:0 "Replace this fool!"
+
+				#location = event_target:monolith_location_snek 
+# - Triggers snek.11
+country_event = {
+    id = snek.10
+	hide_window = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = grand_campaign_player_one
+	}
+	mean_time_to_happen = {
+		months = 480
+	}
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = planet_saturn_snek
+	  		}
+			country_event = { id = snek.11 }
+		}
+	}	
+}
